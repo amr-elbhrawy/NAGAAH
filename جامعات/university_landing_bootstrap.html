@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Basic SEO -->
+    <title>أكاديمية النجاح الجامعي - تفوق في دراستك الجامعية</title>
+    <meta name="description" content="منصة تعليمية متخصصة للطلاب الجامعيين. دعم أكاديمي متقدم، مساعدة في المشاريع والأبحاث، وإرشاد مهني لضمان تفوقك الجامعي.">
+    
+    <!-- Bootstrap RTL CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #3b82f6;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --gradient-primary: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            --gradient-success: linear-gradient(135deg, #10b981, #059669);
+            --gradient-warning: linear-gradient(135deg, #f59e0b, #d97706);
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.6;
+            color: #334155;
+        }
+
+        .bg-gradient-primary {
+            background: var(--gradient-primary) !important;
+        }
+
+        .bg-gradient-success {
+            background: var(--gradient-success) !important;
+        }
+
+        .bg-gradient-warning {
+            background: var(--gradient-warning) !important;
+        }
+
+        .text-gradient {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            min-height: 70vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            border-color: #25D366;
+            color: white;
+            font-family: 'Amiri', serif;
+            font-weight: 700;
+            border-radius: 50px;
+            padding: 12px 30px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-whatsapp:hover {
+            background: #20b958;
+            border-color: #20b958;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+        }
+
+        .card-service {
+            border: none;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .card-service:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            margin: 0 auto 20px;
+        }
+
+        .pricing-card {
+            border: 2px solid #e2e8f0;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+        }
+
+        .pricing-card:hover {
+            border-color: var(--secondary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--warning-color);
+            transform: scale(1.05);
+            z-index: 2;
+        }
+
+        .pricing-card.featured::before {
+            content: 'الأكثر شعبية';
+            position: absolute;
+            top: -12px;
+            right: 24px;
+            background: var(--gradient-warning);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .testimonial-card {
+            border: none;
+            border-radius: 20px;
+            background: #f8fafc;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .university-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .countdown-timer {
+            background: rgba(0,0,0,0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            font-family: 'Courier New', monospace;
+            font-size: 1.5rem;
+            color: #fbbf24;
+            font-weight: bold;
+        }
+
+        .feature-check {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #dcfce7;
+            border: 2px solid #22c55e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .feature-check::after {
+            content: '✓';
+            color: #16a34a;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .stats-section {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #fbbf24;
+            margin-bottom: 10px;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        .bounce {
+            animation: bounce 2s infinite;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: 50vh;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+                margin-bottom: 2rem;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 fade-in">
+                    <h1 class="display-4 fw-bold text-gradient mb-4">
+                        أكاديمية النجاح الجامعي
+                    </h1>
+                    <p class="lead mb-4 text-muted">
+                        منصة تعليمية متخصصة للطلاب الجامعيين - دعم أكاديمي متقدم، مساعدة في المشاريع والأبحاث، وإرشاد مهني لضمان تفوقك الجامعي
+                    </p>
+                    <a href="https://wa.me/+201556762132?text=مرحبًا، أريد الاستفسار عن خدمات الأكاديمية للطلاب الجامعيين" class="btn btn-whatsapp btn-lg">
+                        <i class="fab fa-whatsapp me-2"></i>
+                        تواصل عبر واتساب
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgency Section -->
+    <section class="py-5 bg-danger text-white position-relative overflow-hidden">
+        <div class="container position-relative">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 fade-in">
+                    <div class="fs-1 bounce mb-3">⚡</div>
+                    <h2 class="fw-bold mb-3">عرض محدود للطلاب الجامعيين!</h2>
+                    <p class="mb-3">العرض ينتهي خلال: <span class="countdown-timer" id="countdown">48:00:00</span></p>
+                    
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-4">
+                            <div class="bg-white bg-opacity-10 rounded-3 p-4 backdrop-blur">
+                                <div class="display-4 fw-bold text-warning">20%</div>
+                                <div>خصم إضافي للمسجلين اليوم</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="bg-white bg-opacity-10 rounded-3 p-4 backdrop-blur">
+                                <div class="display-4 fw-bold text-warning">30</div>
+                                <div>مقعد متبقي فقط هذا الشهر</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="bg-white bg-opacity-10 rounded-3 p-4 backdrop-blur">
+                                <div class="display-4 fw-bold text-warning">24</div>
+                                <div>ساعة للحصول على الاستشارة المجانية</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/+201556762132?text=أريد الحصول على العرض المحدود والخصم الإضافي 20%" class="btn btn-warning btn-lg rounded-pill">
+                        احجز مكانك الآن - خصم 20% إضافي
+                    </a>
+                    <p class="small mt-2 opacity-75">⚠️ هذا العرض غير قابل للتجديد ولن يتكرر هذا العام</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8 fade-in">
+                    <h2 class="fw-bold mb-3 text-gradient">خدماتنا المتخصصة للطلاب الجامعيين</h2>
+                    <p class="lead text-muted">دعم شامل لجميع التخصصات والمراحل الجامعية</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="card card-service h-100 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon bg-gradient-primary">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <h5 class="fw-bold mb-3">دروس خصوصية متخصصة</h5>
+                            <p class="text-muted">شرح مبسط للمواد الصعبة مع أساتذة متخصصين في كل مجال</p>
+                            <ul class="list-unstyled text-start">
+                                <li class="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-3 mt-1"></div>
+                                    <span class="small">حصص مفتوحة (بدون حد أقصى)</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-3 mt-1"></div>
+                                    <span class="small">دعم في جميع المواد</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-3 mt-1"></div>
+                                    <span class="small">مساعدة في 3 مشاريع</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-3 mt-1"></div>
+                                    <span class="small">إرشاد مهني متخصص</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-3 mt-1"></div>
+                                    <span class="small">تطوير مهارات العرض</span>
+                                </li>
+                                <li class="d-flex align-items-start">
+                                    <div class="feature-check me-3 mt-1"></div>
+                                    <span class="small">دعم مخصص 24/7</span>
+                                </li>
+                            </ul>
+                            
+                            <button class="btn btn-success w-100 rounded-pill mt-4" onclick="selectPackage('الباقة الشاملة')">
+                                اختر هذه الباقة
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Universities Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8 fade-in">
+                    <h2 class="fw-bold mb-3 text-gradient">نخدم طلاب أفضل الجامعات السعودية</h2>
+                    <p class="lead text-muted">طلابنا من جامعات مرموقة حققوا نجاحات استثنائية</p>
+                </div>
+            </div>
+            
+            <div class="row g-4 text-center">
+                <div class="col-lg-3 col-md-4 col-sm-6 fade-in">
+                    <div class="university-logo mx-auto mb-3">KSU</div>
+                    <h6 class="fw-bold">جامعة الملك سعود</h6>
+                    <p class="small text-muted">250+ طالب</p>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 fade-in">
+                    <div class="university-logo mx-auto mb-3">KFUPM</div>
+                    <h6 class="fw-bold">جامعة الملك فهد</h6>
+                    <p class="small text-muted">180+ طالب</p>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 fade-in">
+                    <div class="university-logo mx-auto mb-3">KAUST</div>
+                    <h6 class="fw-bold">جامعة الملك عبدالله</h6>
+                    <p class="small text-muted">95+ طالب</p>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 fade-in">
+                    <div class="university-logo mx-auto mb-3">KAU</div>
+                    <h6 class="fw-bold">جامعة الملك عبدالعزيز</h6>
+                    <p class="small text-muted">220+ طالب</p>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 fade-in">
+                    <div class="university-logo mx-auto mb-3">IAU</div>
+                    <h6 class="fw-bold">جامعة الإمام عبدالرحمن</h6>
+                    <p class="small text-muted">150+ طالب</p>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 fade-in">
+                    <div class="university-logo mx-auto mb-3">UQU</div>
+                    <h6 class="fw-bold">جامعة أم القرى</h6>
+                    <p class="small text-muted">130+ طالب</p>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 fade-in">
+                    <div class="university-logo mx-auto mb-3">KKU</div>
+                    <h6 class="fw-bold">جامعة الملك خالد</h6>
+                    <p class="small text-muted">110+ طالب</p>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 fade-in">
+                    <div class="university-logo mx-auto mb-3">+20</div>
+                    <h6 class="fw-bold">جامعات أخرى</h6>
+                    <p class="small text-muted">400+ طالب</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section py-5">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8 fade-in">
+                    <h2 class="fw-bold mb-3">أرقام تؤكد تميزنا</h2>
+                    <p class="lead opacity-75">إحصائيات حقيقية من نجاحات طلابنا</p>
+                </div>
+            </div>
+            
+            <div class="row g-4 text-center">
+                <div class="col-lg-3 col-md-6 fade-in">
+                    <div class="stat-number">92%</div>
+                    <p class="mb-0">من طلابنا يحسنون معدلهم</p>
+                </div>
+                <div class="col-lg-3 col-md-6 fade-in">
+                    <div class="stat-number">1,500+</div>
+                    <p class="mb-0">طالب جامعي نجح معنا</p>
+                </div>
+                <div class="col-lg-3 col-md-6 fade-in">
+                    <div class="stat-number">4.8/5</div>
+                    <p class="mb-0">تقييم الطلاب لخدماتنا</p>
+                </div>
+                <div class="col-lg-3 col-md-6 fade-in">
+                    <div class="stat-number">85%</div>
+                    <p class="mb-0">يحصلون على وظيفة بعد التخرج</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8 fade-in">
+                    <h2 class="fw-bold mb-3 text-gradient">قصص نجاح من طلابنا الجامعيين</h2>
+                    <p class="lead text-muted">شاهد كيف غيرت الأكاديمية مستقبلهم المهني</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 fade-in">
+                    <div class="card testimonial-card h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="badge bg-success rounded-pill">معدل: 3.8 → 4.2</span>
+                            </div>
+                            <p class="fst-italic mb-3">"كنت أواجه صعوبة في مواد الهندسة المدنية. الأكاديمية ساعدتني أفهم المفاهيم المعقدة وأحسن معدلي من 3.8 إلى 4.2. الآن عندي عرض وظيفة ممتاز!"</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="fw-bold mb-0 text-primary">أحمد العتيبي</h6>
+                                    <small class="text-muted">هندسة مدنية - جامعة الملك سعود</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 fade-in">
+                    <div class="card testimonial-card h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="badge bg-primary rounded-pill">مشروع تخرج ممتاز</span>
+                            </div>
+                            <p class="fst-italic mb-3">"المساعدة في مشروع التخرج كانت لا تقدر بثمن. حصلت على أفضل مشروع في قسم علوم الحاسب وتم ترشيحي للدراسات العليا بمنحة كاملة."</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="fw-bold mb-0 text-primary">سارة المطيري</h6>
+                                    <small class="text-muted">علوم حاسب - جامعة الملك فهد</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 fade-in">
+                    <div class="card testimonial-card h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="badge bg-warning rounded-pill">وظيفة أحلام</span>
+                            </div>
+                            <p class="fst-italic mb-3">"الإرشاد المهني والتدريب على العروض التقديمية ساعدني أحصل على وظيفة في أرامكو مباشرة بعد التخرج. راتبي الآن 15,000 ريال!"</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="fw-bold mb-0 text-primary">خالد الغامدي</h6>
+                                    <small class="text-muted">هندسة كيميائية - جامعة الملك عبدالعزيز</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Trial Section -->
+    <section class="bg-gradient-success py-5 text-white">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 fade-in">
+                    <h2 class="fw-bold mb-3">استشارة أكاديمية مجانية</h2>
+                    <p class="lead mb-4">احجز جلسة مجانية مع خبرائنا لتقييم وضعك الأكاديمي ووضع خطة للنجاح</p>
+                    
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="bg-white bg-opacity-10 rounded-3 p-3">
+                                <i class="fas fa-user-graduate fs-2 mb-2"></i>
+                                <h6>تقييم المستوى الأكاديمي</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="bg-white bg-opacity-10 rounded-3 p-3">
+                                <i class="fas fa-road fs-2 mb-2"></i>
+                                <h6>وضع خطة دراسية</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="bg-white bg-opacity-10 rounded-3 p-3">
+                                <i class="fas fa-bullseye fs-2 mb-2"></i>
+                                <h6>تحديد الأهداف</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="bg-white bg-opacity-10 rounded-3 p-3">
+                                <i class="fas fa-handshake fs-2 mb-2"></i>
+                                <h6>التعرف على مرشدك</h6>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/+201556762132?text=أريد حجز استشارة أكاديمية مجانية" class="btn btn-light btn-lg rounded-pill me-3">
+                        <i class="fab fa-whatsapp text-success me-2"></i>
+                        احجز استشارتك المجانية
+                    </a>
+                    <a href="https://wa.me/+201556762132?text=أريد معرفة المزيد عن خدمات الأكاديمية" class="btn btn-outline-light btn-lg rounded-pill">
+                        اسأل عن تفاصيل أكثر
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 fade-in">
+                    <h2 class="fw-bold mb-3 text-gradient">ابدأ رحلة تفوقك الجامعي اليوم</h2>
+                    <p class="lead text-muted mb-4">فريقنا من الخبراء الأكاديميين جاهز لدعمك في كل خطوة</p>
+                    
+                    <div class="row g-3 justify-content-center">
+                        <div class="col-auto">
+                            <a href="https://wa.me/+201556762132?text=مرحبًا، أريد الاستفسار عن خدمات الأكاديمية للطلاب الجامعيين" class="btn btn-whatsapp btn-lg rounded-pill">
+                                <i class="fab fa-whatsapp me-2"></i>
+                                واتساب
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="tel:+201556762132" class="btn btn-outline-primary btn-lg rounded-pill">
+                                <i class="fas fa-phone me-2"></i>
+                                اتصال مباشر
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // عد تنازلي للعرض المحدود
+        function startCountdown() {
+            const countdownElement = document.getElementById('countdown');
+            let hours = 48;
+            let minutes = 0;
+            let seconds = 0;
+
+            const timer = setInterval(() => {
+                if (seconds > 0) {
+                    seconds--;
+                } else if (minutes > 0) {
+                    minutes--;
+                    seconds = 59;
+                } else if (hours > 0) {
+                    hours--;
+                    minutes = 59;
+                    seconds = 59;
+                } else {
+                    clearInterval(timer);
+                }
+
+                const formattedTime = 
+                    `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                countdownElement.textContent = formattedTime;
+            }, 1000);
+        }
+
+        // اختيار الباقة
+        function selectPackage(packageName) {
+            const message = `مرحبًا، أريد الاشتراك في ${packageName}. يرجى إرسال التفاصيل والأسعار.`;
+            const whatsappUrl = `https://wa.me/+201556762132?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // تأثير الظهور التدريجي
+        function observeElements() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            });
+
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        }
+
+        // تشغيل السكريبت عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            startCountdown();
+            observeElements();
+        });
+    </script>
+</body>
+</html>="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-2 mt-1"></div>
+                                    <span class="small">جلسات فردية مخصصة</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-2 mt-1"></div>
+                                    <span class="small">شرح تفاعلي ومبسط</span>
+                                </li>
+                                <li class="d-flex align-items-start">
+                                    <div class="feature-check me-2 mt-1"></div>
+                                    <span class="small">تسجيل الحصص للمراجعة</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="card card-service h-100 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon bg-gradient-success">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <h5 class="fw-bold mb-3">مساعدة في المشاريع والأبحاث</h5>
+                            <p class="text-muted">دعم كامل في إعداد وتنفيذ المشاريع الجامعية والأبحاث العلمية</p>
+                            <ul class="list-unstyled text-start">
+                                <li class="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-2 mt-1"></div>
+                                    <span class="small">اختيار موضوع البحث</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-2 mt-1"></div>
+                                    <span class="small">جمع وتحليل البيانات</span>
+                                </li>
+                                <li class="d-flex align-items-start">
+                                    <div class="feature-check me-2 mt-1"></div>
+                                    <span class="small">كتابة وتنسيق البحث</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="card card-service h-100 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon bg-gradient-warning">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <h5 class="fw-bold mb-3">إرشاد مهني وأكاديمي</h5>
+                            <p class="text-muted">توجيه شامل لاختيار التخصص المناسب والتخطيط للمستقبل المهني</p>
+                            <ul class="list-unstyled text-start">
+                                <li class="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-2 mt-1"></div>
+                                    <span class="small">استشارات التخصص</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-2 mt-1"></div>
+                                    <span class="small">التخطيط المهني</span>
+                                </li>
+                                <li class="d-flex align-items-start">
+                                    <div class="feature-check me-2 mt-1"></div>
+                                    <span class="small">تطوير المهارات</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="card card-service h-100 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon" style="background: linear-gradient(135deg, #8b5cf6, #a855f7);">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <h5 class="fw-bold mb-3">إعداد للامتحانات</h5>
+                            <p class="text-muted">تحضير مكثف للامتحانات النهائية والنصفية مع نماذج تدريبية</p>
+                            <ul class="list-unstyled text-start">
+                                <li class="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-2 mt-1"></div>
+                                    <span class="small">نماذج امتحانات سابقة</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-2 mt-1"></div>
+                                    <span class="small">مراجعات مكثفة</span>
+                                </li>
+                                <li class="d-flex align-items-start">
+                                    <div class="feature-check me-2 mt-1"></div>
+                                    <span class="small">استراتيجيات الحل</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="card card-service h-100 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon" style="background: linear-gradient(135deg, #ec4899, #f97316);">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h5 class="fw-bold mb-3">حلقات نقاش أكاديمية</h5>
+                            <p class="text-muted">جلسات جماعية لمناقشة المواضيع المعقدة وتبادل الخبرات</p>
+                            <ul class="list-unstyled text-start">
+                                <li class="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-2 mt-1"></div>
+                                    <span class="small">نقاشات تفاعلية</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-2 mt-1"></div>
+                                    <span class="small">تبادل الخبرات</span>
+                                </li>
+                                <li class="d-flex align-items-start">
+                                    <div class="feature-check me-2 mt-1"></div>
+                                    <span class="small">بناء شبكة علاقات</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="card card-service h-100 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon" style="background: linear-gradient(135deg, #06b6d4, #0891b2);">
+                                <i class="fas fa-presentation"></i>
+                            </div>
+                            <h5 class="fw-bold mb-3">تطوير مهارات العرض</h5>
+                            <p class="text-muted">تدريب على مهارات العرض والتقديم والتواصل الأكاديمي</p>
+                            <ul class="list-unstyled text-start">
+                                <li class="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-2 mt-1"></div>
+                                    <span class="small">تقنيات العرض الفعال</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-2 mt-1"></div>
+                                    <span class="small">التواصل الأكاديمي</span>
+                                </li>
+                                <li class="d-flex align-items-start">
+                                    <div class="feature-check me-2 mt-1"></div>
+                                    <span class="small">بناء الثقة بالنفس</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8 fade-in">
+                    <h2 class="fw-bold mb-3 text-gradient">باقات مصممة لنجاحك الجامعي</h2>
+                    <p class="lead text-muted">اختر الباقة التي تناسب احتياجاتك الأكاديمية</p>
+                </div>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="card pricing-card">
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold text-primary mb-2">الباقة الأساسية</h4>
+                            <p class="text-muted small">للدعم الأكاديمي العام</p>
+                            
+                            <div class="d-flex align-items-baseline justify-content-center my-4">
+                                <span class="display-4 fw-bold text-gradient">400</span>
+                                <span class="text-muted me-2">ريال</span>
+                                <span class="text-muted small">/ شهرياً</span>
+                            </div>
+                            
+                            <ul class="list-unstyled text-start">
+                                <li class="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-3 mt-1"></div>
+                                    <span class="small">4 حصص دروس خصوصية شهرياً</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-3 mt-1"></div>
+                                    <span class="small">دعم في مادة واحدة</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-3 mt-1"></div>
+                                    <span class="small">تقارير أداء شهرية</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-3 mt-1"></div>
+                                    <span class="small">دعم واتساب 24/7</span>
+                                </li>
+                                <li class="d-flex align-items-start">
+                                    <div class="feature-check me-3 mt-1"></div>
+                                    <span class="small">مواد تعليمية رقمية</span>
+                                </li>
+                            </ul>
+                            
+                            <button class="btn btn-outline-primary w-100 rounded-pill mt-4" onclick="selectPackage('الباقة الأساسية')">
+                                اختر هذه الباقة
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="card pricing-card featured">
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold text-warning mb-2">الباقة المتقدمة</h4>
+                            <p class="text-muted small">الخيار الأمثل للطلاب الطموحين</p>
+                            
+                            <div class="d-flex align-items-baseline justify-content-center my-4">
+                                <span class="display-4 fw-bold text-gradient">600</span>
+                                <span class="text-muted me-2">ريال</span>
+                                <span class="text-muted small">/ شهرياً</span>
+                            </div>
+                            
+                            <ul class="list-unstyled text-start">
+                                <li class="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-3 mt-1"></div>
+                                    <span class="small">8 حصص دروس خصوصية شهرياً</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-3 mt-1"></div>
+                                    <span class="small">دعم في 3 مواد</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-3 mt-1"></div>
+                                    <span class="small">مساعدة في مشروع واحد</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-3 mt-1"></div>
+                                    <span class="small">استشارة مهنية شهرية</span>
+                                </li>
+                                <li class="d-flex align-items-start mb-2">
+                                    <div class="feature-check me-3 mt-1"></div>
+                                    <span class="small">حلقات نقاش جماعية</span>
+                                </li>
+                                <li class="d-flex align-items-start">
+                                    <div class="feature-check me-3 mt-1"></div>
+                                    <span class="small">أولوية في الحجز</span>
+                                </li>
+                            </ul>
+                            
+                            <button class="btn btn-warning w-100 rounded-pill mt-4" onclick="selectPackage('الباقة المتقدمة')">
+                                اختر هذه الباقة
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="card pricing-card">
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold text-success mb-2">الباقة الشاملة</h4>
+                            <p class="text-muted small">دعم كامل لضمان التفوق</p>
+                            
+                            <div class="d-flex align-items-baseline justify-content-center my-4">
+                                <span class="display-4 fw-bold text-gradient">800</span>
+                                <span class="text-muted me-2">ريال</span>
+                                <span class="text-muted small">/ شهرياً</span>
+                            </div>
+                            
+                            <ul class="list-unstyled text-start">
+                                <li class

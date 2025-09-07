@@ -4,56 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Basic SEO -->
-    <title>أكاديمية النجاح أونلاين - التعليم عن بعد للمناهج السعودية</title>
-    <meta name="description" content="منصة تعليمية متطورة تقدم دروس أونلاين عالية الجودة لجميع المراحل الدراسية في السعودية. معلمين مؤهلين، أسعار مناسبة، ونتائج مضمونة. ابدأ بحصة مجانية!">
+    <title>أكاديمية النجاح أونلاين - التعليم عن بعد للمناهج الخليجية</title>
+    <meta name="description" content="منصة تعليمية متطورة تقدم دروس أونلاين عالية الجودة لجميع المراحل الدراسية في دول الخليج. معلمين مؤهلين، أسعار مناسبة، ونتائج مضمونة.">
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="أكاديمية النجاح أونلاين - التعليم عن بعد للمناهج السعودية">
-    <meta property="og:description" content="منصة تعليمية رائدة | معلمين مؤهلين | أسعار تنافسية تبدأ من 300 ريال | 95% من طلابنا يحسنون درجاتهم | حصة مجانية الآن!">
-    <meta property="og:image" content="/n.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <!-- Bootstrap RTL CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="أكاديمية النجاح أونلاين - التعليم عن بعد">
-    <meta property="twitter:description" content="منصة تعليمية رائدة | معلمين مؤهلين | أسعار تنافسية | نتائج مضمونة | حصة مجانية!">
-    <meta property="twitter:image" content="/n.jpg">
-    
-    <!-- WhatsApp -->
-    <meta property="og:image:type" content="/n.jpg">
-    
-    <!-- Fonts -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #3b82f6;
+            --success-color: #10b981;
+            --warning-color: #fbbf24;
+            --danger-color: #dc2626;
+            --whatsapp-color: #25D366;
+            --font-cairo: 'Cairo', 'Segoe UI', sans-serif;
         }
 
         body {
-            font-family: 'Cairo', 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            font-family: var(--font-cairo);
             line-height: 1.6;
             color: #334155;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 60px 20px;
+            background-color: #f8fafc;
         }
 
         .hero-section {
-            text-align: center;
-            margin-bottom: 80px;
-            padding: 60px 40px;
             background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
             border-radius: 24px;
             box-shadow: 0 8px 32px rgba(0,0,0,0.08);
@@ -68,77 +46,49 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, #1e3a8a, #3b82f6, #10b981);
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--success-color));
         }
 
-        .hero-section h1 {
-            font-size: 3.5rem;
+        .hero-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
             font-weight: 800;
-            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             margin-bottom: 20px;
-            letter-spacing: -2px;
-        }
-
-        .hero-section p {
-            font-size: 1.25rem;
-            color: #64748b;
-            max-width: 700px;
-            margin: 0 auto 30px;
-            line-height: 1.6;
+            letter-spacing: -1px;
+            line-height: 1.2;
         }
 
         .whatsapp-btn {
-            font-family: 'Amiri', serif;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            padding: 18px 40px;
-            background: linear-gradient(135deg, #25D366, #20b958);
-            color: white;
+            background: linear-gradient(135deg, var(--whatsapp-color), #20b958);
             border: none;
             border-radius: 50px;
-            text-decoration: none;
+            color: white;
             font-weight: 700;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            padding: 18px 40px;
             box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
-            min-width: 300px;
+            transition: all 0.3s ease;
+            min-width: 280px;
+            width: 100%;
+            max-width: 400px;
             position: relative;
             overflow: hidden;
-        }
-
-        .whatsapp-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .whatsapp-btn:hover::before {
-            left: 100%;
         }
 
         .whatsapp-btn:hover {
             background: linear-gradient(135deg, #20b958, #1ea952);
             transform: translateY(-3px);
             box-shadow: 0 12px 30px rgba(37, 211, 102, 0.4);
+            color: white;
         }
 
-        /* قسم الإلحاح */
         .urgency-section {
-            background: linear-gradient(135deg, #dc2626 0%, #ef4444 50%, #f87171 100%);
+            background: linear-gradient(135deg, var(--danger-color) 0%, #ef4444 50%, #f87171 100%);
             color: white;
             border-radius: 24px;
-            padding: 50px 40px;
-            margin-bottom: 80px;
             position: relative;
             overflow: hidden;
             box-shadow: 0 15px 40px rgba(220, 38, 38, 0.4);
@@ -160,21 +110,8 @@
             to { transform: rotate(360deg); }
         }
 
-        .urgency-container {
-            position: relative;
-            z-index: 2;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .urgency-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
         .urgency-icon {
-            font-size: 4rem;
-            margin-bottom: 20px;
+            font-size: clamp(3rem, 8vw, 4rem);
             animation: bounce 2s infinite;
         }
 
@@ -184,16 +121,7 @@
             60% { transform: translateY(-5px); }
         }
 
-        .urgency-header h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
         .urgency-timer {
-            font-size: 1.3rem;
-            font-weight: 600;
             background: rgba(0,0,0,0.2);
             padding: 10px 20px;
             border-radius: 25px;
@@ -202,86 +130,28 @@
 
         #countdown {
             font-family: 'Courier New', monospace;
-            font-size: 1.5rem;
-            color: #fbbf24;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            color: var(--warning-color);
             font-weight: bold;
         }
 
-        .urgency-benefits {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        .urgency-benefit {
-            text-align: center;
-            background: rgba(255,255,255,0.1);
-            padding: 30px 20px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-        }
-
         .benefit-number {
-            font-size: 3rem;
+            font-size: clamp(2rem, 6vw, 3rem);
             font-weight: 900;
-            color: #fbbf24;
-            margin-bottom: 10px;
+            color: var(--warning-color);
         }
 
-        .benefit-text {
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        .urgency-cta {
-            text-align: center;
-        }
-
-        .urgency-btn {
-            font-family: 'Amiri', serif;
-            display: inline-block;
-            padding: 20px 40px;
-            background: linear-gradient(135deg, #fbbf24, #f59e0b);
-            color: #1f2937;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.3rem;
-            font-weight: 700;
-            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.4);
-            transition: all 0.3s ease;
-            margin-bottom: 15px;
-        }
-
-        .urgency-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(251, 191, 36, 0.6);
-        }
-
-        .urgency-note {
-            font-size: 1rem;
-            opacity: 0.9;
-        }
-
-        .pricing-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 80px;
-        }
-
-        .pricing-card {
+        .pricing-card, .subject-card {
             background: white;
             border-radius: 20px;
-            padding: 40px;
-            position: relative;
             border: 2px solid #e2e8f0;
             transition: all 0.4s ease;
             box-shadow: 0 4px 20px rgba(0,0,0,0.06);
             overflow: hidden;
+            position: relative;
         }
 
-        .pricing-card::before {
+        .pricing-card::before, .subject-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -292,27 +162,41 @@
             transition: all 0.3s ease;
         }
 
-        .pricing-card:hover {
-            border-color: #3b82f6;
+        .pricing-card:hover, .subject-card:hover {
+            border-color: var(--secondary-color);
             box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
             transform: translateY(-5px);
         }
 
-        .pricing-card:hover::before {
-            background: linear-gradient(90deg, #3b82f6, #1e40af);
+        .pricing-card:hover::before, .subject-card:hover::before {
+            background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
         }
 
         .popular-badge {
             position: absolute;
             top: -12px;
             right: 24px;
-            background: linear-gradient(135deg, #dc2626, #ef4444);
+            background: linear-gradient(135deg, var(--danger-color), #ef4444);
             color: white;
             padding: 8px 20px;
             border-radius: 25px;
-            font-size: 0.8rem;
+            font-size: clamp(0.7rem, 2vw, 0.8rem);
             font-weight: 600;
             box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        .best-value-badge {
+            position: absolute;
+            top: -12px;
+            right: 24px;
+            background: linear-gradient(135deg, var(--success-color), #059669);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: clamp(0.7rem, 2vw, 0.8rem);
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
             animation: pulse 2s infinite;
         }
 
@@ -322,68 +206,56 @@
             100% { transform: scale(1); }
         }
 
-        .card-header {
-            border-bottom: 1px solid #f1f5f9;
-            padding-bottom: 24px;
-            margin-bottom: 24px;
-            text-align: center;
-        }
-
-        .card-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #1e3a8a;
-            margin-bottom: 8px;
-        }
-
-        .card-subtitle {
-            color: #64748b;
-            font-size: 0.95rem;
-        }
-
-        .price-display {
-            display: flex;
-            align-items: baseline;
-            justify-content: center;
-            margin: 24px 0;
-            gap: 8px;
-        }
-
         .price-amount {
-            font-size: 3.5rem;
+            font-size: clamp(2.5rem, 6vw, 3.5rem);
             font-weight: 800;
-            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            line-height: 1.1;
         }
 
-        .price-currency {
-            font-size: 1.2rem;
+        .original-price {
+            color: #94a3b8;
+            text-decoration: line-through;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            margin-left: 10px;
+        }
+
+        .discount-percentage {
+            background: var(--danger-color);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+        .currency-selector {
+            background: #f8fafc;
+            border-radius: 15px;
+            border: 2px solid #e2e8f0;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .currency-btn {
+            background: transparent;
+            border: none;
+            padding: 10px 15px;
+            font-weight: 600;
             color: #64748b;
-            font-weight: 500;
+            transition: all 0.3s ease;
+            flex: 1;
+            font-size: clamp(0.8rem, 2vw, 1rem);
+            text-align: center;
         }
 
-        .price-period {
-            font-size: 1rem;
-            color: #64748b;
-        }
-
-        .features-list {
-            margin: 32px 0;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 16px;
-            gap: 12px;
-            animation: fadeInUp 0.3s ease;
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        .currency-btn.active {
+            background: var(--secondary-color);
+            color: white;
         }
 
         .feature-check {
@@ -394,7 +266,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: 2px;
             flex-shrink: 0;
             border: 2px solid #22c55e;
         }
@@ -406,26 +277,16 @@
             font-weight: bold;
         }
 
-        .feature-text {
-            font-size: 0.95rem;
-            color: #475569;
-            line-height: 1.5;
-        }
-
         .subscribe-btn {
-            font-family: 'Amiri', serif;
-            width: 100%;
-            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             border: none;
             border-radius: 15px;
-            padding: 16px 24px;
-            font-size: 1.1rem;
             font-weight: 600;
-            cursor: pointer;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
         }
 
         .subscribe-btn::before {
@@ -444,1056 +305,62 @@
         }
 
         .subscribe-btn:hover {
-            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            background: linear-gradient(135deg, var(--secondary-color), #2563eb);
             transform: translateY(-2px);
         }
 
         .popular .subscribe-btn {
-            background: linear-gradient(135deg, #dc2626, #ef4444);
+            background: linear-gradient(135deg, var(--danger-color), #ef4444);
         }
 
         .popular .subscribe-btn:hover {
             background: linear-gradient(135deg, #ef4444, #f87171);
         }
 
-        /* قسم المقارنة */
-        .comparison-section {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            border-radius: 24px;
-            padding: 60px 40px;
-            margin-bottom: 80px;
+        .best-value .subscribe-btn {
+            background: linear-gradient(135deg, var(--success-color), #059669);
         }
 
-        .comparison-container {
-            max-width: 1200px;
-            margin: 0 auto;
+        .best-value .subscribe-btn:hover {
+            background: linear-gradient(135deg, #059669, #047857);
         }
 
-        .comparison-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .comparison-header h2 {
-            font-size: 2.5rem;
+        .section-title {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
             font-weight: 800;
-            color: #1e3a8a;
-            margin-bottom: 15px;
-            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-        }
-
-        .comparison-header p {
-            font-size: 1.2rem;
-            color: #64748b;
-        }
-
-        .comparison-table {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-            margin-bottom: 40px;
-        }
-
-        .comparison-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            border-bottom: 1px solid #f1f5f9;
-        }
-
-        .comparison-row:last-child {
-            border-bottom: none;
-        }
-
-        .header-row {
-            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-            color: white;
-        }
-
-        .comparison-item {
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            min-height: 80px;
-        }
-
-        .feature-column {
-            background: #f8fafc;
-            font-weight: 600;
-            color: #1e3a8a;
-        }
-
-        .traditional-column {
-            border-right: 1px solid #f1f5f9;
-        }
-
-        .online-column.winner {
-            background: linear-gradient(135deg, #dcfce7, #bbf7d0);
-            position: relative;
-        }
-
-        .winner::after {
-            content: '🏆';
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 1.2rem;
-        }
-
-        .cost-amount {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-
-        .cost-details {
-            font-size: 0.85rem;
-            color: #64748b;
-        }
-
-        .feature-status {
-            padding: 6px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .feature-status.positive {
-            background: #dcfce7;
-            color: #16a34a;
-        }
-
-        .feature-status.negative {
-            background: #fee2e2;
-            color: #dc2626;
-        }
-
-        .feature-status.neutral {
-            background: #fef3c7;
-            color: #d97706;
-        }
-
-        .feature-details {
-            font-size: 0.8rem;
-            color: #64748b;
-        }
-
-        .test-scores, .cost-saving {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .score, .old-cost, .new-cost {
-            padding: 4px 8px;
-            background: #f1f5f9;
-            border-radius: 10px;
-            font-size: 0.8rem;
-        }
-
-        .arrow {
-            color: #3b82f6;
-            font-weight: bold;
-        }
-
-        .comparison-summary {
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .comparison-summary h3 {
-            font-size: 1.5rem;
-            color: #1e3a8a;
-            margin-bottom: 25px;
-        }
-
-        .savings-calculation {
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .calculation-item, .calculation-result {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-            border-bottom: 1px solid #f1f5f9;
-        }
-
-        .calculation-result {
-            border-bottom: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-
-        .calc-amount.traditional {
-            color: #dc2626;
-        }
-
-        .calc-amount.online {
-            color: #16a34a;
-        }
-
-        .calc-savings {
-            color: #1e3a8a;
-            font-size: 1.3rem;
-            font-weight: 800;
-        }
-
-        .yearly-savings {
-            text-align: center;
-            margin-top: 20px;
-            padding: 15px;
-            background: linear-gradient(135deg, #fef3c7, #fbbf24);
-            border-radius: 15px;
-            font-size: 1.2rem;
-            color: #92400e;
-        }
-
-        /* قسم التجربة المجانية */
-        .free-trial-section {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            color: white;
-            border-radius: 24px;
-            padding: 60px 40px;
-            margin-bottom: 80px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .trial-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .trial-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .trial-header h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 15px;
-        }
-
-        .trial-header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        .trial-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-
-        .trial-feature {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            background: rgba(255,255,255,0.1);
-            padding: 25px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }
-
-        .trial-icon {
-            font-size: 2.5rem;
-            flex-shrink: 0;
-        }
-
-        .trial-text h4 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .trial-text p {
-            opacity: 0.9;
-            font-size: 0.95rem;
-        }
-
-        .trial-booking {
-            background: rgba(255,255,255,0.1);
-            padding: 40px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-        }
-
-        .booking-steps {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .booking-step {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .step-number {
-            width: 40px;
-            height: 40px;
-            background: white;
-            color: #10b981;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
-        .step-text {
-            font-weight: 600;
-        }
-
-        .time-slots h4 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 1.2rem;
-        }
-
-        .slots-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .time-slot {
-            padding: 12px 20px;
-            background: white;
-            color: #10b981;
-            border: none;
-            border-radius: 25px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .time-slot:hover {
-            background: #f0fdf4;
-            transform: translateY(-2px);
-        }
-
-        .slots-note {
-            text-align: center;
-            opacity: 0.8;
-            font-size: 0.9rem;
-        }
-
-        .trial-guarantee {
-            margin: 40px 0;
-            padding: 25px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-        }
-
-        .trial-guarantee h4 {
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-
-        .trial-guarantee ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .trial-guarantee li {
-            padding: 5px 0;
-            position: relative;
-            padding-right: 25px;
-        }
-
-        .trial-guarantee li::before {
-            content: '✓';
-            position: absolute;
-            right: 0;
-            color: #fbbf24;
-            font-weight: bold;
-        }
-
-        .trial-cta {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .trial-btn {
-            font-family: 'Amiri', serif;
-            padding: 16px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            text-align: center;
-            min-width: 200px;
-        }
-
-        .trial-btn.main-btn {
-            background: white;
-            color: #10b981;
-        }
-
-        .trial-btn.secondary-btn {
-            background: rgba(255,255,255,0.2);
-            color: white;
-            border: 2px solid white;
-        }
-
-        .trial-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-
-        /* قسم شهادات العملاء */
-        .testimonials-section {
-            background: white;
-            border-radius: 24px;
-            padding: 60px 40px;
-            margin-bottom: 80px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-        }
-
-        .testimonials-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .testimonials-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .testimonials-header h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #1e3a8a;
-            margin-bottom: 15px;
-        }
-
-        .testimonials-header p {
-            font-size: 1.2rem;
-            color: #64748b;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 25px;
-            margin-bottom: 50px;
+            line-height: 1.2;
         }
 
         .testimonial-card {
-            background: #f8fafc;
-            padding: 30px;
+            background: white;
             border-radius: 20px;
             border: 2px solid #e2e8f0;
-            transition: all 0.3s ease;
-        }
-
-        .testimonial-card.featured {
-            background: linear-gradient(135deg, #fef3c7, #fbbf24);
-            border-color: #f59e0b;
-            transform: scale(1.02);
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            position: relative;
         }
 
         .testimonial-card:hover {
+            border-color: var(--warning-color);
+            box-shadow: 0 20px 40px rgba(251, 191, 36, 0.15);
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         }
 
-        .testimonial-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .stars {
-            color: #fbbf24;
-            font-size: 1.2rem;
-        }
-
-        .improvement-badge {
-            background: #10b981;
-            color: white;
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .testimonial-content p {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #374151;
-            margin-bottom: 20px;
-            font-style: italic;
-        }
-
-        .testimonial-author {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .author-name {
-            font-weight: 600;
-            color: #1e3a8a;
-        }
-
-        .author-details {
-            font-size: 0.9rem;
-            color: #64748b;
-        }
-
-        .grade-improvement {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: 600;
-        }
-
-        .before-grade {
-            color: #dc2626;
-        }
-
-        .after-grade {
-            color: #10b981;
-        }
-
-        .success-stats {
-            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-            color: white;
-            padding: 50px;
+        .offer-card {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
             border-radius: 20px;
-            margin-bottom: 40px;
-        }
-
-        .stats-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .stats-header h3 {
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 900;
-            color: #fbbf24;
-            margin-bottom: 10px;
-        }
-
-        .stat-label {
-            font-size: 1rem;
-            opacity: 0.9;
-        }
-
-        .testimonials-cta {
-            text-align: center;
-        }
-
-        .testimonials-cta h3 {
-            font-size: 1.5rem;
-            color: #1e3a8a;
-            margin-bottom: 25px;
-        }
-
-        .success-btn {
-            font-family: 'Amiri', serif;
-            display: inline-block;
-            padding: 18px 40px;
-            background: linear-gradient(135deg, #10b981, #059669);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: 700;
-            transition: all 0.3s ease;
-        }
-
-        .success-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(16, 185, 129, 0.3);
-        }
-
-        /* قسم الخصومات */
-        .discount-section {
-            background: linear-gradient(135deg, #fef3c7 0%, #fbbf24 100%);
-            border-radius: 24px;
-            padding: 60px 40px;
-            margin-bottom: 80px;
-            position: relative;
-            overflow: hidden;
-            border: 3px solid #f59e0b;
-        }
-
-        .discount-section::before {
-            content: '🎉';
-            position: absolute;
-            font-size: 8rem;
-            top: -20px;
-            left: -20px;
-            opacity: 0.1;
-            z-index: 1;
-            animation: bounce 3s infinite;
-        }
-
-        .discount-container {
-            position: relative;
-            z-index: 2;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .discount-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .discount-header h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #92400e;
-            margin-bottom: 15px;
-        }
-
-        .discount-header p {
-            font-size: 1.2rem;
-            color: #a16207;
-            font-weight: 500;
-        }
-
-        .discount-offers {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
-        }
-
-        .discount-card {
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.2);
-            border: 2px solid #fed7aa;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .discount-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(245, 158, 11, 0.3);
-        }
-
-        .discount-icon {
-            font-size: 3rem;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .discount-content h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #1e3a8a;
-            text-align: center;
-            margin-bottom: 15px;
-        }
-
-        .discount-percentage {
-            font-size: 3rem;
-            font-weight: 900;
-            color: #dc2626;
-            text-align: center;
-            margin-bottom: 20px;
-            position: relative;
-        }
-
-        .discount-percentage::after {
-            content: 'خصم';
-            font-size: 1rem;
-            position: absolute;
-            top: 5px;
-            right: -10px;
-            background: #dc2626;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 10px;
-        }
-
-        .discount-details {
-            text-align: right;
-        }
-
-        .discount-details p {
-            font-size: 1rem;
-            color: #374151;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .discount-details ul {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 15px;
-        }
-
-        .discount-details li {
-            padding: 8px 0;
-            color: #4b5563;
-            border-bottom: 1px solid #f3f4f6;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .discount-details li::before {
-            content: '✓';
-            color: #10b981;
-            font-weight: bold;
-            margin-left: 10px;
-        }
-
-        .discount-note {
-            background: linear-gradient(135deg, #e0f2fe, #b3e5fc);
-            padding: 15px;
-            border-radius: 12px;
-            font-size: 0.9rem;
-            color: #0c4a6e;
-            border-right: 4px solid #0284c7;
-        }
-
-        .combo-discount {
-            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-            color: white;
-            padding: 35px;
-            border-radius: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(30, 58, 138, 0.3);
-        }
-
-        .combo-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .combo-header h3 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .combo-header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        .combo-examples {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .combo-example {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }
-
-        .combo-icon {
-            font-size: 2.5rem;
-            flex-shrink: 0;
-        }
-
-        .combo-text h4 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .combo-text p {
-            font-size: 0.95rem;
-            opacity: 0.9;
-            line-height: 1.4;
-        }
-
-        .discount-cta {
-            background: white;
-            padding: 30px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.15);
-            border: 2px solid #fed7aa;
-        }
-
-        .discount-cta h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #1e3a8a;
-            margin-bottom: 10px;
-        }
-
-        .discount-cta p {
-            font-size: 1.1rem;
-            color: #64748b;
-            margin-bottom: 25px;
-        }
-
-        .discount-btn {
-            font-family: 'Amiri', serif;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 16px 35px;
-            background: linear-gradient(135deg, #f59e0b, #d97706);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.3);
-        }
-
-        .discount-btn:hover {
-            background: linear-gradient(135deg, #d97706, #b45309);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
-        }
-
-        /* قسم طمأنة الأهالي */
-        .parents-section {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            border-radius: 24px;
-            padding: 60px 40px;
-            margin-bottom: 80px;
+            border: 2px solid var(--warning-color);
             position: relative;
             overflow: hidden;
         }
 
-        .parents-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .parents-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .parents-text h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #1e3a8a;
-            text-align: center;
-            margin-bottom: 8px;
-        }
-
-        .parents-text h3 {
-            font-size: 1.3rem;
-            color: #64748b;
-            text-align: center;
-            margin-bottom: 50px;
-            font-weight: 400;
-        }
-
-        .assurance-points {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        .assurance-point {
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-            padding: 30px;
-            background: white;
-            border-radius: 18px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .assurance-point:hover {
-            transform: translateY(-4px);
-        }
-
-        .assurance-icon {
-            font-size: 2.5rem;
-            flex-shrink: 0;
-            margin-top: 5px;
-        }
-
-        .assurance-content h4 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #1e3a8a;
-            margin-bottom: 8px;
-        }
-
-        .assurance-content p {
-            color: #64748b;
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-
-        .guarantee-box {
-            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-            color: white;
-            padding: 35px;
-            border-radius: 20px;
-            text-align: center;
-            margin-top: 40px;
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
-        }
-
-        .guarantee-box h4 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .guarantee-box p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            opacity: 0.95;
-        }
-
-        .contact-section {
-            background: white;
-            border-radius: 24px;
-            padding: 60px 40px;
-            text-align: center;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #1e3a8a, #3b82f6, #10b981);
-        }
-
-        .contact-section h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 16px;
-        }
-
-        .contact-section p {
-            font-size: 1.1rem;
-            color: #64748b;
-            margin-bottom: 40px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .contact-methods {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .contact-method {
-            font-family: 'Amiri', serif;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 28px;
-            background: #f8fafc;
-            border: 2px solid #e2e8f0;
-            border-radius: 15px;
-            text-decoration: none;
-            color: #475569;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact-method::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
-            transition: left 0.5s;
-        }
-
-        .contact-method:hover::before {
-            left: 100%;
-        }
-
-        .contact-method:hover {
-            background: #3b82f6;
-            color: white;
-            border-color: #3b82f6;
-            transform: translateY(-2px);
+        .offer-icon {
+            font-size: clamp(2rem, 6vw, 3rem);
+            animation: bounce 2s infinite;
         }
 
         .fade-in {
@@ -1507,2185 +374,1163 @@
             transform: translateY(0);
         }
 
-        /* تحسينات للتابلت */
-        @media (max-width: 1024px) {
+        .pricing-highlight {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border: 2px solid var(--success-color);
+            border-radius: 15px;
+            padding: 15px;
+        }
+
+        /* Special Notice Styles */
+        .special-notice {
+            background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%);
+            border: 2px solid #fb923c;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .special-notice::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #fb923c, #f97316, #ea580c);
+        }
+
+        /* Responsive Grid Fixes */
+        .pricing-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .subject-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        }
+
+        /* Mobile-First Responsive Design */
+        @media (max-width: 576px) {
             .container {
-                padding: 40px 20px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+            .hero-section,
+            .urgency-section,
+            .pricing-card,
+            .subject-card,
+            .offer-card,
+            .testimonial-card {
+                margin: 0 -15px;
+                border-radius: 0;
             }
             
             .hero-section {
-                padding: 50px 30px;
-                margin-bottom: 60px;
-            }
-            
-            .hero-section h1 {
-                font-size: 3rem;
+                padding: 2rem 1rem;
             }
             
             .urgency-section {
-                margin-bottom: 60px;
-                padding: 40px 30px;
+                padding: 2rem 1rem;
             }
             
-            .comparison-section {
-                margin-bottom: 60px;
-                padding: 50px 30px;
+            .pricing-card,
+            .subject-card,
+            .offer-card,
+            .testimonial-card {
+                padding: 1.5rem;
+                margin-bottom: 1rem;
             }
             
-            .comparison-row {
-                grid-template-columns: 1fr;
-                text-align: center;
+            .currency-selector {
+                margin: 0 -15px 20px -15px;
+                border-radius: 0;
             }
             
-            .comparison-item {
-                border-right: none;
-                border-bottom: 1px solid #f1f5f9;
-            }
-            
-            .free-trial-section {
-                margin-bottom: 60px;
-                padding: 50px 30px;
-            }
-            
-            .booking-steps {
-                flex-direction: column;
-                gap: 20px;
-            }
-            
-            .testimonials-section {
-                margin-bottom: 60px;
-                padding: 50px 30px;
-            }
-            
-            .pricing-container {
-                gap: 25px;
-                margin-bottom: 60px;
-            }
-            
-            .discount-section {
-                margin-bottom: 60px;
-                padding: 50px 30px;
-            }
-            
-            .discount-offers {
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 20px;
-            }
-            
-            .combo-examples {
-                grid-template-columns: 1fr;
-            }
-            
-            .parents-section {
-                margin-bottom: 60px;
-                padding: 50px 30px;
-            }
-            
-            .assurance-points {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-        }
-
-        /* تحسينات للهاتف الكبير */
-        @media (max-width: 768px) {
-            .container {
-                padding: 30px 15px;
-            }
-            
-            .hero-section {
-                padding: 40px 25px;
-                margin-bottom: 50px;
-            }
-            
-            .hero-section h1 {
-                font-size: 2.5rem;
-                margin-bottom: 15px;
-            }
-            
-            .hero-section p {
-                font-size: 1.1rem;
-                margin-bottom: 25px;
+            .currency-btn {
+                padding: 12px 10px;
+                font-size: 0.8rem;
             }
             
             .whatsapp-btn {
-                min-width: 280px;
-                padding: 16px 35px;
-                font-size: 1.1rem;
+                min-width: 100%;
+                margin: 0 auto;
             }
-            
-            .urgency-section {
-                padding: 40px 25px;
-                margin-bottom: 50px;
-            }
-            
-            .urgency-header h2 {
-                font-size: 2rem;
-            }
-            
-            .urgency-benefits {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .comparison-section {
-                padding: 40px 25px;
-                margin-bottom: 50px;
-            }
-            
-            .comparison-header h2 {
-                font-size: 2rem;
-            }
-            
-            .free-trial-section {
-                padding: 40px 25px;
-                margin-bottom: 50px;
-            }
-            
-            .trial-header h2 {
-                font-size: 2rem;
-            }
-            
-            .trial-features {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .trial-feature {
-                flex-direction: column;
-                text-align: center;
-                gap: 15px;
-            }
-            
-            .trial-cta {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .testimonials-section {
-                padding: 40px 25px;
-                margin-bottom: 50px;
-            }
-            
-            .testimonials-header h2 {
-                font-size: 2rem;
-            }
-            
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .testimonial-author {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
-            }
-            
-            .stats-grid {
+            .comparison-table {
+        display: block;
+    }
+
+    .comparison-table thead {
+        display: none; /* Hide header on mobile */
+        
+    }
+
+    .comparison-table tbody {
+        display: block;
+    }
+
+    .comparison-table tr {
+        display: block;
+        margin-bottom: 1.5rem;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        padding: 1rem;
+        
+    }
+
+    .comparison-table td {
+        display: block;
+        text-align: center;
+        border: none !important;
+        padding: 0.75rem !important;
+  
+    }
+
+    .comparison-table td.feature-title {
+          color: white;
+        font-weight: 700;
+        padding: 1rem !important;
+        border-radius: 10px 10px 0 0;
+        margin-bottom: 0.5rem;
+        font-size: clamp(1rem, 2.5vw, 1.1rem);
+    }
+
+    .comparison-table td:not(.feature-title) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem 1rem !important;
+        margin-bottom: 0.5rem;
+    }
+
+    .comparison-table td:not(.feature-title)::before {
+        content: attr(data-label);
+        font-weight: 600;
+
+
+        margin-bottom: 0.5rem;
+        font-size: clamp(0.9rem, 2.5vw, 1rem);
+    }
+
+    .comparison-table td:nth-child(2)::before {
+        content: "التعليم التقليدي";
+    }
+
+    .comparison-table td:nth-child(3)::before {
+        content: "أكاديمية النجاح";
+    }
+
+    .comparison-table .badge {
+        font-size: clamp(0.7rem, 2vw, 0.8rem);
+    }
+
+    .comparison-table small {
+        font-size: clamp(0.7rem, 2vw, 0.8rem);
+    }
+
+        }
+
+        @media (min-width: 577px) and (max-width: 768px) {
+            .pricing-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 25px;
             }
             
-            .pricing-container {
+            .subject-grid {
                 grid-template-columns: 1fr;
-                gap: 20px;
-                margin-bottom: 50px;
-            }
-            
-            .pricing-card {
-                padding: 30px 25px;
-            }
-            
-            .discount-section {
-                padding: 40px 25px;
-                margin-bottom: 50px;
-            }
-            
-            .discount-header h2 {
-                font-size: 2rem;
-            }
-            
-            .discount-offers {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .discount-card {
-                padding: 25px 20px;
-            }
-            
-            .combo-discount {
-                padding: 25px 20px;
-            }
-            
-            .combo-example {
-                flex-direction: column;
-                text-align: center;
-                gap: 10px;
-            }
-            
-            .discount-cta {
-                padding: 25px 20px;
-            }
-            
-            .parents-section {
-                padding: 40px 25px;
-                margin-bottom: 50px;
-            }
-            
-            .parents-text h2 {
-                font-size: 2rem;
-            }
-            
-            .parents-text h3 {
-                font-size: 1.1rem;
-                margin-bottom: 35px;
-            }
-            
-            .assurance-point {
-                padding: 25px;
-            }
-            
-            .contact-section {
-                padding: 40px 25px;
-            }
-            
-            .contact-section h2 {
-                font-size: 2rem;
-            }
-            
-            .contact-methods {
-                flex-direction: column;
-                align-items: center;
-                gap: 15px;
-            }
-            
-            .contact-method {
-                width: 280px;
-                max-width: 100%;
-                justify-content: center;
             }
         }
 
-        /* تحسينات للهاتف الصغير */
-        @media (max-width: 480px) {
-            .container {
-                padding: 20px 10px;
+        @media (min-width: 769px) and (max-width: 992px) {
+            .pricing-grid {
+                grid-template-columns: repeat(3, 1fr);
             }
             
-            .hero-section {
-                padding: 30px 20px;
-                margin-bottom: 40px;
+            .subject-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 993px) {
+            .pricing-grid {
+                grid-template-columns: repeat(4, 1fr);
             }
             
-            .hero-section h1 {
-                font-size: 2rem;
-                letter-spacing: -1px;
+            .subject-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
-            
-            .hero-section p {
-                font-size: 1rem;
+        }
+
+        /* Fix for very small screens */
+        @media (max-width: 320px) {
+            .hero-title {
+                font-size: 1.5rem;
             }
             
             .whatsapp-btn {
-                min-width: 260px;
-                padding: 15px 30px;
-                font-size: 1rem;
-            }
-            
-            .urgency-section {
-                padding: 30px 20px;
-                margin-bottom: 40px;
-            }
-            
-            .urgency-header h2 {
-                font-size: 1.8rem;
+                font-size: 0.9rem;
+                padding: 15px 25px;
             }
             
             .benefit-number {
-                font-size: 2.5rem;
-            }
-            
-            .urgency-btn {
-                padding: 16px 30px;
-                font-size: 1.1rem;
-            }
-            
-            .comparison-section {
-                padding: 30px 20px;
-                margin-bottom: 40px;
-            }
-            
-            .comparison-header h2 {
                 font-size: 1.8rem;
             }
             
-            .free-trial-section {
-                padding: 30px 20px;
-                margin-bottom: 40px;
-            }
-            
-            .trial-header h2 {
-                font-size: 1.8rem;
-            }
-            
-            .testimonials-section {
-                padding: 30px 20px;
-                margin-bottom: 40px;
-            }
-            
-            .testimonials-header h2 {
-                font-size: 1.8rem;
-            }
-            
-            .stats-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .stat-number {
-                font-size: 2.5rem;
-            }
-            
-            .pricing-card {
-                padding: 25px 20px;
-                border-radius: 16px;
-            }
-            
-            .card-title {
-                font-size: 1.3rem;
-            }
-            
-            .price-amount {
-                font-size: 2.8rem;
-            }
-            
-            .discount-section {
-                padding: 30px 20px;
-                border-radius: 18px;
-                margin-bottom: 40px;
-            }
-            
-            .discount-header h2 {
-                font-size: 1.8rem;
-            }
-            
-            .discount-header p {
-                font-size: 1rem;
-            }
-            
-            .discount-card {
-                padding: 20px 15px;
-            }
-            
-            .discount-percentage {
-                font-size: 2.5rem;
-            }
-            
-            .combo-discount {
-                padding: 20px 15px;
-            }
-            
-            .combo-header h3 {
-                font-size: 1.5rem;
-            }
-            
-            .discount-cta {
-                padding: 20px 15px;
-            }
-            
-            .discount-btn {
-                width: 100%;
-                max-width: 260px;
-            }
-            
-            .parents-section {
-                padding: 30px 20px;
-                border-radius: 18px;
-            }
-            
-            .parents-text h2 {
-                font-size: 1.7rem;
-            }
-            
-            .assurance-point {
-                padding: 20px;
-                border-radius: 15px;
-                flex-direction: column;
-                text-align: center;
-                gap: 15px;
-            }
-            
-            .assurance-icon {
-                font-size: 2.2rem;
-            }
-            
-            .assurance-content h4 {
-                font-size: 1.1rem;
-            }
-            
-            .guarantee-box {
-                padding: 25px 20px;
-            }
-            
-            .contact-section {
-                padding: 30px 20px;
-            }
-            
-            .contact-section h2 {
-                font-size: 1.7rem;
-            }
-            
-            .contact-method {
-                width: 260px;
-                padding: 12px 24px;
+            .currency-btn {
+                font-size: 0.7rem;
+                padding: 8px 5px;
             }
         }
 
-        /* تحسينات للهواتف الصغيرة جداً */
-        @media (max-width: 360px) {
-            .hero-section h1 {
-                font-size: 1.8rem;
-            }
-            
-            .whatsapp-btn {
-                min-width: 240px;
-                padding: 14px 25px;
-            }
-            
-            .urgency-header h2 {
-                font-size: 1.6rem;
-            }
-            
-            .comparison-header h2 {
-                font-size: 1.6rem;
-            }
-            
-            .trial-header h2 {
-                font-size: 1.6rem;
-            }
-            
-            .testimonials-header h2 {
-                font-size: 1.6rem;
-            }
-            
-            .parents-text h2 {
-                font-size: 1.5rem;
-            }
-            
-            .price-amount {
-                font-size: 2.5rem;
-            }
-            
-            .discount-header h2 {
-                font-size: 1.6rem;
-            }
-            
-            .discount-percentage {
-                font-size: 2.2rem;
-            }
-            
-            .combo-header h3 {
-                font-size: 1.3rem;
-            }
-            
-            .discount-btn {
-                max-width: 240px;
-                padding: 14px 25px;
-                font-size: 1rem;
-            }
-            
-            .contact-method {
-                width: 240px;
-            }
+        /* Ensure text readability on all devices */
+        .text-responsive {
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+            line-height: 1.5;
         }
 
-        /* تحسينات للشاشات الكبيرة */
-        @media (min-width: 1400px) {
-            .hero-section h1 {
-                font-size: 4rem;
-            }
-            
-            .whatsapp-btn {
-                min-width: 350px;
-                padding: 20px 45px;
-                font-size: 1.3rem;
-            }
-            
-            .pricing-container {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 35px;
-            }
+        /* Improved button spacing */
+        .btn-responsive {
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+            padding: clamp(12px, 3vw, 18px) clamp(20px, 5vw, 40px);
         }
-        /* تحسينات الاستجابة للهواتف المحمولة */
-
-/* الأستايلات الأساسية للهاتف الكبير والمتوسط */
-@media (max-width: 768px) {
-    /* الحاوي الرئيسي */
-    .container {
-        padding: 20px 15px;
-        max-width: 100%;
-    }
-    
-    /* قسم البطل */
-    .hero-section {
-        padding: 30px 20px;
-        margin-bottom: 40px;
-        border-radius: 16px;
-    }
-    
-    .hero-section h1 {
-        font-size: 2.2rem;
-        line-height: 1.2;
-        margin-bottom: 15px;
-        letter-spacing: -1px;
-    }
-    
-    .hero-section p {
-        font-size: 1rem;
-        margin-bottom: 25px;
-        line-height: 1.5;
-    }
-    
-    .whatsapp-btn {
-        min-width: 280px;
-        max-width: 90%;
-        padding: 16px 30px;
-        font-size: 1.1rem;
-        gap: 10px;
-    }
-    
-    /* قسم الإلحاح */
-    .urgency-section {
-        padding: 30px 20px;
-        margin-bottom: 40px;
-        border-radius: 16px;
-    }
-    
-    .urgency-header h2 {
-        font-size: 1.8rem;
-        margin-bottom: 10px;
-    }
-    
-    .urgency-timer {
-        font-size: 1.1rem;
-        padding: 8px 16px;
-    }
-    
-    #countdown {
-        font-size: 1.2rem;
-    }
-    
-    .urgency-benefits {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        margin-bottom: 30px;
-    }
-    
-    .urgency-benefit {
-        padding: 25px 15px;
-    }
-    
-    .benefit-number {
-        font-size: 2.5rem;
-    }
-    
-    .benefit-text {
-        font-size: 1rem;
-    }
-    
-    .urgency-btn {
-        padding: 18px 30px;
-        font-size: 1.1rem;
-        width: 90%;
-        max-width: 320px;
-    }
-    
-    /* بطاقات الأسعار */
-    .pricing-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        margin-bottom: 40px;
-    }
-    
-    .pricing-card {
-        padding: 25px 20px;
-        border-radius: 16px;
-        margin: 0 auto;
-        max-width: 350px;
-    }
-    
-    .card-title {
-        font-size: 1.3rem;
-    }
-    
-    .card-subtitle {
-        font-size: 0.9rem;
-    }
-    
-    .price-amount {
-        font-size: 2.8rem;
-    }
-    
-    .price-currency {
-        font-size: 1.1rem;
-    }
-    
-    .feature-text {
-        font-size: 0.9rem;
-    }
-    
-    .subscribe-btn {
-        padding: 14px 20px;
-        font-size: 1rem;
-    }
-    
-    /* قسم المقارنة */
-    .comparison-section {
-        padding: 30px 20px;
-        margin-bottom: 40px;
-        border-radius: 16px;
-    }
-    
-    .comparison-header h2 {
-        font-size: 1.8rem;
-        margin-bottom: 10px;
-    }
-    
-    .comparison-header p {
-        font-size: 1rem;
-    }
-    
-    .comparison-table {
-        border-radius: 16px;
-    }
-    
-    .comparison-row {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    .comparison-item {
-        padding: 15px;
-        min-height: 60px;
-        border-right: none;
-        border-bottom: 1px solid #f1f5f9;
-    }
-    
-    .header-row .comparison-item {
-        background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-        color: white;
-    }
-    
-    .feature-column {
-        background: #1e3a8a !important;
-        color: white !important;
-        font-weight: 700;
-    }
-    
-    .cost-amount {
-        font-size: 1.1rem;
-    }
-    
-    .cost-details {
-        font-size: 0.8rem;
-    }
-    
-    .feature-status {
-        padding: 4px 10px;
-        font-size: 0.85rem;
-    }
-    
-    .savings-calculation {
-        max-width: 100%;
-        padding: 0 10px;
-    }
-    
-    .calculation-item, .calculation-result {
-        padding: 12px 0;
-        font-size: 0.95rem;
-    }
-    
-    .calc-savings {
-        font-size: 1.1rem;
-    }
-    
-    .yearly-savings {
-        font-size: 1rem;
-        padding: 12px;
-    }
-    
-    /* قسم التجربة المجانية */
-    .free-trial-section {
-        padding: 30px 20px;
-        margin-bottom: 40px;
-        border-radius: 16px;
-    }
-    
-    .trial-header h2 {
-        font-size: 1.8rem;
-    }
-    
-    .trial-header p {
-        font-size: 1rem;
-    }
-    
-    .trial-features {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .trial-feature {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-        gap: 15px;
-    }
-    
-    .trial-icon {
-        font-size: 2rem;
-    }
-    
-    .trial-text h4 {
-        font-size: 1rem;
-    }
-    
-    .trial-text p {
-        font-size: 0.9rem;
-    }
-    
-    .booking-steps {
-        flex-direction: column;
-        gap: 20px;
-        margin-bottom: 30px;
-    }
-    
-    .booking-step {
-        justify-content: center;
-    }
-    
-    .step-number {
-        width: 35px;
-        height: 35px;
-        font-size: 1.1rem;
-    }
-    
-    .step-text {
-        font-size: 1rem;
-    }
-    
-    .slots-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-    
-    .time-slot {
-        padding: 10px 15px;
-        font-size: 0.9rem;
-    }
-    
-    .trial-guarantee {
-        padding: 20px;
-    }
-    
-    .trial-guarantee h4 {
-        font-size: 1.1rem;
-    }
-    
-    .trial-cta {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .trial-btn {
-        padding: 14px 25px;
-        font-size: 1rem;
-        min-width: 250px;
-        max-width: 90%;
-    }
-    
-    /* قسم الشهادات */
-    .testimonials-section {
-        padding: 30px 20px;
-        margin-bottom: 40px;
-        border-radius: 16px;
-    }
-    
-    .testimonials-header h2 {
-        font-size: 1.8rem;
-    }
-    
-    .testimonials-header p {
-        font-size: 1rem;
-    }
-    
-    .testimonials-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .testimonial-card {
-        padding: 25px;
-        border-radius: 16px;
-    }
-    
-    .testimonial-card.featured {
-        transform: none;
-    }
-    
-    .testimonial-author {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-    
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-    
-    .stat-number {
-        font-size: 2.5rem;
-    }
-    
-    .stat-label {
-        font-size: 0.9rem;
-    }
-    
-    .success-btn {
-        padding: 16px 30px;
-        font-size: 1.1rem;
-        max-width: 90%;
-    }
-    
-    /* قسم الخصومات */
-    .discount-section {
-        padding: 30px 20px;
-        margin-bottom: 40px;
-        border-radius: 16px;
-    }
-    
-    .discount-header h2 {
-        font-size: 1.8rem;
-    }
-    
-    .discount-header p {
-        font-size: 1rem;
-    }
-    
-    .discount-offers {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .discount-card {
-        padding: 20px;
-        border-radius: 16px;
-    }
-    
-    .discount-content h3 {
-        font-size: 1.1rem;
-    }
-    
-    .discount-percentage {
-        font-size: 2.2rem;
-    }
-    
-    .discount-details p {
-        font-size: 0.9rem;
-    }
-    
-    .discount-details ul {
-        margin-bottom: 10px;
-    }
-    
-    .discount-details li {
-        padding: 6px 0;
-        font-size: 0.85rem;
-    }
-    
-    .discount-note {
-        padding: 12px;
-        font-size: 0.8rem;
-    }
-    
-    .combo-discount {
-        padding: 20px;
-        margin-bottom: 20px;
-    }
-    
-    .combo-header h3 {
-        font-size: 1.4rem;
-    }
-    
-    .combo-header p {
-        font-size: 1rem;
-    }
-    
-    .combo-examples {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    .combo-example {
-        flex-direction: column;
-        text-align: center;
-        padding: 15px;
-        gap: 10px;
-    }
-    
-    .combo-icon {
-        font-size: 2rem;
-    }
-    
-    .combo-text h4 {
-        font-size: 1rem;
-    }
-    
-    .combo-text p {
-        font-size: 0.85rem;
-    }
-    
-    .discount-cta {
-        padding: 20px;
-    }
-    
-    .discount-cta h3 {
-        font-size: 1.3rem;
-    }
-    
-    .discount-btn {
-        width: 90%;
-        max-width: 280px;
-        padding: 14px 25px;
-        font-size: 1rem;
-    }
-    
-    /* قسم طمأنة الأهالي */
-    .parents-section {
-        padding: 30px 20px;
-        margin-bottom: 40px;
-        border-radius: 16px;
-    }
-    
-    .parents-text h2 {
-        font-size: 1.8rem;
-    }
-    
-    .parents-text h3 {
-        font-size: 1.1rem;
-        margin-bottom: 30px;
-    }
-    
-    .assurance-points {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .assurance-point {
-        padding: 20px;
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-        border-radius: 16px;
-    }
-    
-    .assurance-icon {
-        font-size: 2rem;
-    }
-    
-    .assurance-content h4 {
-        font-size: 1.1rem;
-    }
-    
-    .assurance-content p {
-        font-size: 0.9rem;
-    }
-    
-    .guarantee-box {
-        padding: 25px 20px;
-        border-radius: 16px;
-    }
-    
-    .guarantee-box h4 {
-        font-size: 1.2rem;
-    }
-    
-    .guarantee-box p {
-        font-size: 1rem;
-    }
-    
-    /* قسم التواصل */
-    .contact-section {
-        padding: 30px 20px;
-        border-radius: 16px;
-    }
-    
-    .contact-section h2 {
-        font-size: 1.8rem;
-    }
-    
-    .contact-section p {
-        font-size: 1rem;
-        margin-bottom: 30px;
-    }
-    
-    .contact-methods {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-    
-    .contact-method {
-        width: 250px;
-        max-width: 90%;
-        padding: 12px 25px;
-        font-size: 1rem;
-        justify-content: center;
-        border-radius: 12px;
-    }
-}
-
-/* للهواتف الصغيرة */
-@media (max-width: 480px) {
-    .container {
-        padding: 15px 10px;
-    }
-    
-    .hero-section {
-        padding: 25px 15px;
-        margin-bottom: 30px;
-    }
-    
-    .hero-section h1 {
-        font-size: 1.9rem;
-        line-height: 1.1;
-    }
-    
-    .hero-section p {
-        font-size: 0.95rem;
-    }
-    
-    .whatsapp-btn {
-        min-width: 260px;
-        padding: 15px 25px;
-        font-size: 1rem;
-    }
-    
-    .urgency-section {
-        padding: 25px 15px;
-        margin-bottom: 30px;
-    }
-    
-    .urgency-header h2 {
-        font-size: 1.6rem;
-    }
-    
-    .urgency-timer {
-        font-size: 1rem;
-    }
-    
-    #countdown {
-        font-size: 1.1rem;
-    }
-    
-    .benefit-number {
-        font-size: 2.2rem;
-    }
-    
-    .urgency-btn {
-        padding: 16px 25px;
-        font-size: 1rem;
-        max-width: 260px;
-    }
-    
-    .pricing-card {
-        padding: 20px 15px;
-        max-width: 320px;
-    }
-    
-    .card-title {
-        font-size: 1.2rem;
-    }
-    
-    .price-amount {
-        font-size: 2.5rem;
-    }
-    
-    .comparison-section {
-        padding: 25px 15px;
-        margin-bottom: 30px;
-    }
-    
-    .comparison-header h2 {
-        font-size: 1.6rem;
-    }
-    
-    .comparison-item {
-        padding: 12px;
-        min-height: 50px;
-    }
-    
-    .free-trial-section {
-        padding: 25px 15px;
-        margin-bottom: 30px;
-    }
-    
-    .trial-header h2 {
-        font-size: 1.6rem;
-    }
-    
-    .trial-feature {
-        padding: 15px;
-    }
-    
-    .slots-grid {
-        grid-template-columns: 1fr;
-        gap: 8px;
-    }
-    
-    .time-slot {
-        padding: 12px 20px;
-        font-size: 0.95rem;
-    }
-    
-    .trial-btn {
-        min-width: 240px;
-        padding: 13px 20px;
-        font-size: 0.95rem;
-    }
-    
-    .testimonials-section {
-        padding: 25px 15px;
-        margin-bottom: 30px;
-    }
-    
-    .testimonials-header h2 {
-        font-size: 1.6rem;
-    }
-    
-    .testimonial-card {
-        padding: 20px 15px;
-    }
-    
-    .stats-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    .stat-number {
-        font-size: 2.2rem;
-    }
-    
-    .discount-section {
-        padding: 25px 15px;
-        margin-bottom: 30px;
-    }
-    
-    .discount-header h2 {
-        font-size: 1.6rem;
-    }
-    
-    .discount-card {
-        padding: 15px;
-    }
-    
-    .discount-percentage {
-        font-size: 2rem;
-    }
-    
-    .combo-discount {
-        padding: 15px;
-    }
-    
-    .combo-header h3 {
-        font-size: 1.2rem;
-    }
-    
-    .discount-btn {
-        max-width: 260px;
-        padding: 13px 20px;
-        font-size: 0.95rem;
-    }
-    
-    .parents-section {
-        padding: 25px 15px;
-        margin-bottom: 30px;
-    }
-    
-    .parents-text h2 {
-        font-size: 1.6rem;
-    }
-    
-    .parents-text h3 {
-        font-size: 1rem;
-    }
-    
-    .assurance-point {
-        padding: 15px;
-    }
-    
-    .assurance-icon {
-        font-size: 1.8rem;
-    }
-    
-    .guarantee-box {
-        padding: 20px 15px;
-    }
-    
-    .contact-section {
-        padding: 25px 15px;
-    }
-    
-    .contact-section h2 {
-        font-size: 1.6rem;
-    }
-    
-    .contact-method {
-        width: 240px;
-        padding: 11px 20px;
-        font-size: 0.95rem;
-    }
-}
-
-/* للشاشات الصغيرة جداً */
-@media (max-width: 360px) {
-    .hero-section h1 {
-        font-size: 1.7rem;
-    }
-    
-    .whatsapp-btn {
-        min-width: 240px;
-        padding: 14px 20px;
-        font-size: 0.95rem;
-    }
-    
-    .urgency-header h2 {
-        font-size: 1.4rem;
-    }
-    
-    .urgency-btn {
-        max-width: 240px;
-        padding: 15px 20px;
-        font-size: 0.95rem;
-    }
-    
-    .pricing-card {
-        max-width: 300px;
-    }
-    
-    .price-amount {
-        font-size: 2.2rem;
-    }
-    
-    .comparison-header h2, 
-    .trial-header h2, 
-    .testimonials-header h2,
-    .discount-header h2, 
-    .parents-text h2, 
-    .contact-section h2 {
-        font-size: 1.4rem;
-    }
-    
-    .trial-btn {
-        min-width: 220px;
-    }
-    
-    .stat-number {
-        font-size: 2rem;
-    }
-    
-    .discount-percentage {
-        font-size: 1.8rem;
-    }
-    
-    .contact-method {
-        width: 220px;
-    }
-}
-
-/* تحسينات إضافية للأداء */
-@media (max-width: 768px) {
-    /* تقليل الظلال للأداء الأفضل */
-    .hero-section,
-    .urgency-section,
-    .pricing-card,
-    .comparison-section,
-    .free-trial-section,
-    .testimonials-section,
-    .discount-section,
-    .parents-section,
-    .contact-section {
-        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    }
-    
-    /* تحسين الخطوط للقراءة */
-    body {
-        font-size: 14px;
-        line-height: 1.5;
-    }
-    
-    /* تحسين المساحات للمس */
-    button, 
-    .whatsapp-btn, 
-    .urgency-btn, 
-    .subscribe-btn, 
-    .trial-btn, 
-    .success-btn, 
-    .discount-btn, 
-    .contact-method,
-    .time-slot {
-        min-height: 44px;
-        touch-action: manipulation;
-    }
-    
-    /* منع التكبير غير المرغوب */
-    input, select, textarea {
-        font-size: 16px;
-    }
-}
-
-/* تحسينات للاتجاه الأفقي للهواتف */
-@media (max-width: 768px) and (orientation: landscape) {
-    .hero-section,
-    .urgency-section,
-    .comparison-section,
-    .free-trial-section,
-    .testimonials-section,
-    .discount-section,
-    .parents-section {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        margin-bottom: 25px;
-    }
-    
-    .hero-section h1 {
-        font-size: 1.8rem;
-    }
-    
-    .urgency-benefits {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
-    }
-    
-    .trial-features {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .stats-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="hero-section fade-in">
-            <h1>أكاديمية النجاح أونلاين</h1>
-            <p>منصة تعليمية متطورة تقدم تعليمًا عالي الجودة لجميع المراحل الدراسية في المملكة العربية السعودية</p>
-            <a href="https://wa.me/+201556762132?text=مرحبًا، أريد الاستفسار عن خدمات أكاديمية النجاح أونلاين" class="whatsapp-btn">💬 تواصل عبر واتساب</a>
+    <div class="container my-5">
+        <!-- Hero Section -->
+        <div class="hero-section p-4 p-md-5 mb-5 text-center fade-in">
+            <h1 class="hero-title">أكاديمية النجاح أونلاين</h1>
+            <p class="fs-5 text-muted mb-4 text-responsive">منصة تعليمية متطورة تقدم تعليمًا عالي الجودة لجميع المراحل الدراسية في دول الخليج العربي</p>
+            
+            <!-- Special Notice for Multiple Students -->
+            <div class="special-notice p-4 mb-4 mx-auto" style="max-width: 700px;">
+                <div class="position-relative" style="z-index: 2;">
+                    <div class="d-flex align-items-center justify-content-center gap-3 mb-3">
+                        <div class="fs-1">👨‍👩‍👧‍👦</div>
+                        <h4 class="fw-bold text-orange-800 mb-0">ميزة خاصة للعائلات</h4>
+                    </div>
+                    <div class="bg-white bg-opacity-80 rounded-3 p-3">
+                        <h5 class="text-orange-700 fw-bold mb-2">🎯 يمكن لأكثر من طالب المشاركة في نفس الحصة بسعر طالب واحد</h5>
+                        <p class="text-orange-600 mb-0 text-responsive"><strong>رفقاً بأولياء الأمور:</strong> الأخوة أو الأصدقاء  في نفس المرحلة يمكنهم الدراسة معاً في حصة واحدة بنفس السعر - وفر أكثر واستفد أكثر!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="https://wa.me/+201556762132?text=مرحبًا، أريد الاستفسار عن خدمات أكاديمية النجاح أونلاين" class="btn whatsapp-btn btn-responsive">
+                💬 تواصل عبر واتساب
+            </a>
         </div>
 
-        <!-- قسم الإلحاح -->
-        <div class="urgency-section fade-in">
-            <div class="urgency-container">
-                <div class="urgency-header">
+        <!-- Urgency Section -->
+        <div class="urgency-section p-4 p-md-5 mb-5 fade-in">
+            <div class="position-relative" style="z-index: 2;">
+                <div class="text-center mb-4">
                     <div class="urgency-icon">⚡</div>
-                    <h2>العرض محدود الوقت!</h2>
-                    <p class="urgency-timer">العرض ينتهي خلال: <span id="countdown">72:00:00</span></p>
+                    <h2 class="fw-bold mb-3">العرض محدود الوقت!</h2>
+                    <p class="urgency-timer fs-5 text-responsive">العرض ينتهي خلال: <span id="countdown">72:00:00</span></p>
                 </div>
                 
-                <div class="urgency-benefits">
-                    <div class="urgency-benefit">
-                        <div class="benefit-number">15%</div>
-                        <div class="benefit-text">خصم إضافي للمسجلين اليوم</div>
+                <div class="row g-3 mb-4">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="text-center bg-light bg-opacity-10 p-3 p-md-4 rounded-4 backdrop-blur">
+                            <div class="benefit-number">15%</div>
+                            <div class="fw-semibold text-responsive">خصم إضافي للمسجلين اليوم</div>
+                        </div>
                     </div>
-                    <div class="urgency-benefit">
-                        <div class="benefit-number">50</div>
-                        <div class="benefit-text">مقعد متبقي فقط هذا الشهر</div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="text-center bg-light bg-opacity-10 p-3 p-md-4 rounded-4 backdrop-blur">
+                            <div class="benefit-number">50</div>
+                            <div class="fw-semibold text-responsive">مقعد متبقي فقط هذا الشهر</div>
+                        </div>
                     </div>
-                    <div class="urgency-benefit">
-                        <div class="benefit-number">24</div>
-                        <div class="benefit-text">ساعة للحصول على التقييم المجاني</div>
+                    <div class="col-md-4 col-12">
+                        <div class="text-center bg-light bg-opacity-10 p-3 p-md-4 rounded-4 backdrop-blur">
+                            <div class="benefit-number">24</div>
+                            <div class="fw-semibold text-responsive">ساعة للحصول على التقييم المجاني</div>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="urgency-cta">
-                    <a href="https://wa.me/+201556762132?text=أريد الحصول على العرض المحدود والخصم الإضافي 15%" class="urgency-btn">
+                <div class="text-center">
+                    <a href="https://wa.me/+201556762132?text=أريد الحصول على العرض المحدود والخصم الإضافي 15%" class="btn btn-warning btn-lg rounded-pill px-4 px-md-5 py-3 fw-bold btn-responsive">
                         احجز مكانك الآن - خصم 15% إضافي
                     </a>
-                    <p class="urgency-note">⚠️ هذا العرض غير قابل للتجديد ولن يتكرر هذا العام</p>
+                    <p class="mt-3 mb-0 text-responsive">⚠️ هذا العرض غير قابل للتجديد ولن يتكرر هذا العام</p>
                 </div>
             </div>
         </div>
 
-        <div class="pricing-container">
-            <!-- المرحلة الابتدائية -->
-            <div class="pricing-card fade-in">
-                <div class="card-header">
-                    <h3 class="card-title">المرحلة الابتدائية</h3>
-                    <p class="card-subtitle">للصفوف الأول إلى السادس الابتدائي</p>
+        <!-- Currency Selection -->
+        <div class="text-center mb-4 fade-in">
+            <h3 class="section-title mb-3">اختر العملة المفضلة</h3>
+            <div class="currency-selector mx-auto" style="max-width: 600px;">
+                <div class="d-flex">
+                    <button class="currency-btn active" onclick="changeCurrency('SAR', 1, 'ريال سعودي')">🇸🇦 السعودية</button>
+                    <button class="currency-btn" onclick="changeCurrency('AED', 1, 'درهم إماراتي')">🇦🇪 الإمارات</button>
+                    <button class="currency-btn" onclick="changeCurrency('KWD', 0.12, 'دينار كويتي')">🇰🇼 الكويت</button>
+                    <button class="currency-btn" onclick="changeCurrency('QAR', 1.45, 'ريال قطري')">🇶🇦 قطر</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Special Offers Section -->
+        <div class="text-center mb-5 fade-in">
+            <h3 class="section-title mb-3">🎉 عروض وخصومات خاصة</h3>
+        </div>
+
+        <div class="subject-grid mb-5">
+            <!-- Subject Discount Offer -->
+            <div class="offer-card p-4 h-100 d-flex flex-column fade-in">
+                <div class="text-center mb-3">
+                    <div class="offer-icon">📚</div>
+                    <h4 class="fw-bold text-warning-emphasis">عرض المادة الثانية</h4>
+                    <p class="text-warning-emphasis fw-semibold text-responsive">احجز مادتين واحصل على خصم 25%</p>
                 </div>
                 
-                <div class="price-display">
-                    <span class="price-amount">300</span>
-                    <span class="price-currency">ريال</span>
-                    <span class="price-period">/ شهرياً</span>
-                </div>
-                
-                <div class="features-list">
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">مدرسين متخصصين</div>
+                <div class="flex-grow-1 mb-4">
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">اختر أي مادتين من نفس المرحلة</span>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">منهج سعودي معتمد</div>
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">خصم 25% على إجمالي المبلغ</span>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">تقارير أداء دورية</div>
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">تنسيق بين المعلمين لضمان التكامل</span>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">جلسات تعليمية مباشرة</div>
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">متابعة متخصصة لكل مادة</span>
                     </div>
                 </div>
                 
-                <button class="subscribe-btn" onclick="selectPackage('المرحلة الابتدائية')">اختر هذه الباقة</button>
+                <div class="text-center">
+                    <button class="btn btn-warning btn-lg rounded-pill px-4 py-3 fw-bold w-100 btn-responsive" onclick="selectOffer('عرض المادة الثانية')">
+                        احصل على هذا العرض
+                    </button>
+                </div>
             </div>
 
-            <!-- المرحلة المتوسطة -->
-            <div class="pricing-card fade-in popular">
+            <!-- Siblings Discount Offer -->
+            <div class="offer-card p-4 h-100 d-flex flex-column fade-in">
+                <div class="text-center mb-3">
+                    <div class="offer-icon">👨‍👩‍👧‍👦</div>
+                    <h4 class="fw-bold text-warning-emphasis">عرض الأخوة</h4>
+                    <p class="text-warning-emphasis fw-semibold text-responsive">خصم 30% للأخ/الأخت الثاني</p>
+                </div>
+                
+                <div class="flex-grow-1 mb-4">
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">الطالب الأول بالسعر العادي</span>
+                    </div>
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">الأخ/الأخت الثاني بخصم 30%</span>
+                    </div>
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">يمكن دمج الحصص أو منفصلة</span>
+                    </div>
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">تقارير مفصلة لكل طالب</span>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <button class="btn btn-warning btn-lg rounded-pill px-4 py-3 fw-bold w-100 btn-responsive" onclick="selectOffer('عرض الأخوة')">
+                        احصل على هذا العرض
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subject Packages Section -->
+        <div class="text-center mb-5 fade-in">
+            <h3 class="section-title mb-3">عروض المواد الدراسية</h3>
+            <p class="fs-5 text-muted text-responsive">وفر أكثر مع باقات المواد المتعددة</p>
+        </div>
+
+        <!-- Subject Cards -->
+        <div class="subject-grid mb-5">
+            <!-- Two Subjects Package -->
+            <div class="subject-card h-100 d-flex flex-column p-4 fade-in">
+                <div class="text-center border-bottom pb-3 mb-3">
+                    <h4 class="fw-bold text-primary">باقة المادتين</h4>
+                    <p class="text-muted small text-responsive">اختر أي مادتين من نفس المرحلة الدراسية</p>
+                </div>
+                
+                <!-- Pricing Box -->
+                <div class="pricing-highlight mb-4">
+                    <div class="row g-2 text-center">
+                        <div class="col-6">
+                            <div class="small text-muted fw-bold">التأسيس</div>
+                            <div class="d-flex align-items-center justify-content-center gap-1">
+                                <span class="badge bg-danger small">-25%</span>
+                                <span class="text-decoration-line-through small text-muted foundation-two-original">300</span>
+                            </div>
+                            <div class="fw-bold text-success fs-5 foundation-two-price">250</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="small text-muted fw-bold">الابتدائية</div>
+                            <div class="d-flex align-items-center justify-content-center gap-1">
+                                <span class="badge bg-danger small">-25%</span>
+                                <span class="text-decoration-line-through small text-muted elementary-two-original">400</span>
+                            </div>
+                            <div class="fw-bold text-success fs-5 elementary-two-price">350</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="small text-muted fw-bold">المتوسطة</div>
+                            <div class="d-flex align-items-center justify-content-center gap-1">
+                                <span class="badge bg-danger small">-25%</span>
+                                <span class="text-decoration-line-through small text-muted middle-two-original">500</span>
+                            </div>
+                            <div class="fw-bold text-success fs-5 middle-two-price">450</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="small text-muted fw-bold">الثانوية</div>
+                            <div class="d-flex align-items-center justify-content-center gap-1">
+                                <span class="badge bg-danger small">-25%</span>
+                                <span class="text-decoration-line-through small text-muted high-two-original">700</span>
+                            </div>
+                            <div class="fw-bold text-success fs-5 high-two-price">600</div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-2">
+                        <small class="text-muted">الأسعار بالـ <span class="currency-symbol">ريال سعودي</span> شهرياً</small>
+                    </div>
+                </div>
+                
+                <div class="flex-grow-1 mb-4">
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">اختر أي مادتين من نفس المرحلة</span>
+                    </div>
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">خصم 25% على الأسعار العادية</span>
+                    </div>
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">متابعة متخصصة لكل مادة</span>
+                    </div>
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">تنسيق بين المعلمين</span>
+                    </div>
+                </div>
+                
+                <div class="mt-auto">
+                    <button class="btn subscribe-btn w-100 py-3" onclick="selectPackage('باقة المادتين')">اختر باقة المادتين</button>
+                </div>
+            </div>
+
+            <!-- All Subjects Package (4 Subjects) -->
+            <div class="subject-card h-100 d-flex flex-column p-4 fade-in best-value">
+                <div class="best-value-badge">الأوفر على الإطلاق</div>
+                <div class="text-center border-bottom pb-3 mb-3">
+                    <h4 class="fw-bold text-primary">باقة جميع المواد</h4>
+                    <p class="text-muted small text-responsive">4 مواد أساسية شاملة بسعر مميز</p>
+                </div>
+                
+                <!-- Pricing Box -->
+                <div class="bg-success bg-opacity-10 border border-success rounded-3 p-4 mb-4">
+                    <div class="row g-2 text-center">
+                        <div class="col-6">
+                            <div class="small text-muted fw-bold">التأسيس</div>
+                            <div class="d-flex align-items-center justify-content-center gap-1">
+                                <span class="badge bg-success small">وفر 150 ريال</span>
+                            </div>
+                            <div class="fw-bold text-success fs-4 foundation-all-price">450</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="small text-muted fw-bold">الابتدائية</div>
+                            <div class="d-flex align-items-center justify-content-center gap-1">
+                                <span class="badge bg-success small">وفر 150 ريال</span>
+                            </div>
+                            <div class="fw-bold text-success fs-4 elementary-all-price">650</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="small text-muted fw-bold">المتوسطة</div>
+                            <div class="d-flex align-items-center justify-content-center gap-1">
+                                <span class="badge bg-success small">وفر 300 ريال</span>
+                            </div>
+                            <div class="fw-bold text-success fs-4 middle-all-price">700</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="small text-muted fw-bold">الثانوية</div>
+                            <div class="d-flex align-items-center justify-content-center gap-1">
+                                <span class="badge bg-success small">وفر 500 ريال</span>
+                            </div>
+                            <div class="fw-bold text-success fs-4 high-all-price">900</div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-3">
+                        <small class="text-muted">الأسعار بالـ <span class="currency-symbol">ريال سعودي</span> شهرياً</small>
+                        <div class="small text-success fw-bold mt-1">🎯 4 مواد أساسية بسعر واحد</div>
+                    </div>
+                </div>
+                
+                <div class="flex-grow-1 mb-4">
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">4 مواد أساسية شاملة</span>
+                    </div>
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">توفير كبير مقارنة بالأسعار الفردية</span>
+                    </div>
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">تنسيق شامل بين جميع المعلمين</span>
+                    </div>
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">خطة دراسية متكاملة</span>
+                    </div>
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">أولوية في المواعيد والدعم</span>
+                    </div>
+                </div>
+                
+                <div class="mt-auto">
+                    <button class="btn subscribe-btn w-100 py-3" onclick="selectPackage('باقة جميع المواد')">اختر باقة جميع المواد</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Success Stories Section -->
+        <div class="text-center mb-5 fade-in">
+            <h3 class="section-title mb-3">قصص نجاح حقيقية من أولياء الأمور</h3>
+            <p class="fs-5 text-muted text-responsive">شهادات صادقة من عائلات استفادت من خدماتنا</p>
+        </div>
+
+        <div class="pricing-grid mb-5">
+            <div class="testimonial-card p-4 h-100 fade-in">
+                <div class="d-flex mb-3">
+                    <div class="text-warning fs-5">★★★★★</div>
+                    <span class="text-muted ms-2 small">5/5</span>
+                </div>
+                <p class="text-muted mb-3 text-responsive">"ابني كان يواجه صعوبة في الرياضيات والعلوم. بعد 3 أشهر مع أكاديمية النجاح، تحسنت درجاته من 65% إلى 92%. المعلمين صبورين والمتابعة ممتازة."</p>
+                <div class="d-flex align-items-center">
+                    <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                        <span class="fw-bold text-primary">أم أحمد</span>
+                    </div>
+                    <div>
+                        <div class="fw-semibold">أم أحمد الشمري</div>
+                        <small class="text-muted">الرياض - طالب في الصف الثالث متوسط</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card p-4 h-100 fade-in">
+                <div class="d-flex mb-3">
+                    <div class="text-warning fs-5">★★★★★</div>
+                    <span class="text-muted ms-2 small">5/5</span>
+                </div>
+                <p class="text-muted mb-3 text-responsive">"بنتي في الثانوية وكانت تحتاج مساعدة في الفيزياء والكيمياء. الأساتذة شرحوا بطريقة مبسطة وواضحة. النتيجة: تفوق في الاختبارات والقبول في كلية الهندسة!"</p>
+                <div class="d-flex align-items-center">
+                    <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                        <span class="fw-bold text-primary">أبو فاطمة</span>
+                    </div>
+                    <div>
+                        <div class="fw-semibold">أبو فاطمة العنزي</div>
+                        <small class="text-muted">الدمام - طالبة في الثانوية</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card p-4 h-100 fade-in">
+                <div class="d-flex mb-3">
+                    <div class="text-warning fs-5">★★★★★</div>
+                    <span class="text-muted ms-2 small">5/5</span>
+                </div>
+                <p class="text-muted mb-3 text-responsive">"لدي طفلان في المرحلة الابتدائية. استفدنا من عرض الأخوة وحصلنا على خصم رائع. الأهم من ذلك أن الأطفال أصبحوا يحبون الدراسة والتعلم."</p>
+                <div class="d-flex align-items-center">
+                    <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                        <span class="fw-bold text-primary">أم سعد</span>
+                    </div>
+                    <div>
+                        <div class="fw-semibold">أم سعد القحطاني</div>
+                        <small class="text-muted">جدة - طالبان في الابتدائية</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card p-4 h-100 fade-in">
+                <div class="d-flex mb-3">
+                    <div class="text-warning fs-5">★★★★★</div>
+                    <span class="text-muted ms-2 small">5/5</span>
+                </div>
+                <p class="text-muted mb-3 text-responsive">"التعليم أونلاين وفر علينا الوقت والمجهود. ابنتي تدرس في راحة البيت، والنتائج مذهلة. المعلمة تتابعها بشكل فردي وتركز على نقاط ضعفها."</p>
+                <div class="d-flex align-items-center">
+                    <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                        <span class="fw-bold text-primary">أبو مريم</span>
+                    </div>
+                    <div>
+                        <div class="fw-semibold">أبو مريم المطيري</div>
+                        <small class="text-muted">الكويت - طالبة في الصف الخامس</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Regular Pricing Cards -->
+        <div class="text-center mb-5 fade-in">
+            <h3 class="section-title mb-3">باقات المراحل الدراسية</h3>
+            <p class="fs-5 text-muted text-responsive">اختر المرحلة المناسبة لطفلك</p>
+        </div>
+
+        <div class="pricing-grid mb-5">
+            <!-- Foundation -->
+            <div class="pricing-card h-100 d-flex flex-column p-4 fade-in">
+                <div class="text-center border-bottom pb-3 mb-3">
+                    <h4 class="fw-bold text-primary">باقة التأسيس</h4>
+                    <p class="text-muted small text-responsive">تأسيس الطفل من الصفر - القراءة والكتابة والحساب</p>
+                </div>
+                
+                <div class="text-center mb-4">
+                    <span class="price-amount foundation-price">150</span>
+                    <span class="fs-5 text-muted currency-symbol">ريال سعودي</span>
+                    <span class="d-block text-muted text-responsive">شهرياً</span>
+                </div>
+                
+                <div class="flex-grow-1 mb-4">
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">تعلم الحروف والأرقام</span>
+                    </div>
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">القراءة والكتابة</span>
+                    </div>
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">العمليات الحسابية البسيطة</span>
+                    </div>
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">ألعاب تعليمية تفاعلية</span>
+                    </div>
+                </div>
+                
+                <div class="mt-auto">
+                    <button class="btn subscribe-btn w-100 py-3 btn-responsive" onclick="selectPackage('باقة التأسيس')">اختر هذه الباقة</button>
+                </div>
+            </div>
+
+            <!-- Elementary -->
+            <div class="pricing-card h-100 d-flex flex-column p-4 fade-in">
+                <div class="text-center border-bottom pb-3 mb-3">
+                    <h4 class="fw-bold text-primary">المرحلة الابتدائية</h4>
+                    <p class="text-muted small text-responsive">للصفوف الأول إلى السادس الابتدائي</p>
+                </div>
+                
+                <div class="text-center mb-4">
+                    <span class="price-amount elementary-price">200</span>
+                    <span class="fs-5 text-muted currency-symbol">ريال سعودي</span>
+                    <span class="d-block text-muted text-responsive">شهرياً</span>
+                </div>
+                
+                <div class="flex-grow-1 mb-4">
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">مدرسين متخصصين</span>
+                    </div>
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">منهج خليجي معتمد</span>
+                    </div>
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">تقارير أداء دورية</span>
+                    </div>
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">جلسات تعليمية مباشرة</span>
+                    </div>
+                </div>
+                
+                <div class="mt-auto">
+                    <button class="btn subscribe-btn w-100 py-3 btn-responsive" onclick="selectPackage('المرحلة الابتدائية')">اختر هذه الباقة</button>
+                </div>
+            </div>
+
+            <!-- Middle School -->
+            <div class="pricing-card h-100 d-flex flex-column p-4 fade-in popular">
                 <div class="popular-badge">الأكثر اختياراً</div>
-                <div class="card-header">
-                    <h3 class="card-title">المرحلة المتوسطة</h3>
-                    <p class="card-subtitle">للصفوف الأول إلى الثالث المتوسط</p>
+                <div class="text-center border-bottom pb-3 mb-3">
+                    <h4 class="fw-bold text-primary">المرحلة المتوسطة</h4>
+                    <p class="text-muted small text-responsive">للصفوف الأول إلى الثالث المتوسط</p>
                 </div>
                 
-                <div class="price-display">
-                    <span class="price-amount">350</span>
-                    <span class="price-currency">ريال</span>
-                    <span class="price-period">/ شهرياً</span>
+                <div class="text-center mb-4">
+                    <span class="price-amount middle-price">250</span>
+                    <span class="fs-5 text-muted currency-symbol">ريال سعودي</span>
+                    <span class="d-block text-muted text-responsive">شهرياً</span>
                 </div>
                 
-                <div class="features-list">
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">دروس تفاعلية متقدمة</div>
+                <div class="flex-grow-1 mb-4">
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">دروس تفاعلية متقدمة</span>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">مواد رقمية شاملة</div>
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">مواد رقمية شاملة</span>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">دعم تعليمي مستمر</div>
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">دعم تعليمي مستمر</span>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">اختبارات تقييمية</div>
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">اختبارات تقييمية</span>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">إعداد للاختبارات النهائية</div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">دروس مسجلة متاحة 24/7</div>
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">دروس مسجلة متاحة 24/7</span>
                     </div>
                 </div>
                 
-                <button class="subscribe-btn" onclick="selectPackage('المرحلة المتوسطة')">اختر هذه الباقة</button>
+                <div class="mt-auto">
+                    <button class="btn subscribe-btn w-100 py-3 btn-responsive" onclick="selectPackage('المرحلة المتوسطة')">اختر هذه الباقة</button>
+                </div>
             </div>
 
-            <!-- المرحلة الثانوية -->
-            <div class="pricing-card fade-in">
-                <div class="card-header">
-                    <h3 class="card-title">المرحلة الثانوية</h3>
-                    <p class="card-subtitle">لجميع مسارات الثانوية العامة</p>
+            <!-- High School -->
+            <div class="pricing-card h-100 d-flex flex-column p-4 fade-in">
+                <div class="text-center border-bottom pb-3 mb-3">
+                    <h4 class="fw-bold text-primary">المرحلة الثانوية</h4>
+                    <p class="text-muted small text-responsive">لجميع مسارات الثانوية العامة</p>
                 </div>
                 
-                <div class="price-display">
-                    <span class="price-amount">450</span>
-                    <span class="price-currency">ريال</span>
-                    <span class="price-period">/ شهرياً</span>
+                <div class="text-center mb-4">
+                    <span class="price-amount high-price">350</span>
+                    <span class="fs-5 text-muted currency-symbol">ريال سعودي</span>
+                    <span class="d-block text-muted text-responsive">شهرياً</span>
                 </div>
                 
-                <div class="features-list">
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">دروس خصوصية أونلاين</div>
+                <div class="flex-grow-1 mb-4">
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">دروس خصوصية أونلاين</span>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">مواد دراسية متقدمة</div>
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">مواد دراسية متقدمة</span>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">استشارات أكاديمية</div>
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">استشارات أكاديمية</span>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">إعداد لاختبارات القدرات</div>
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">إعداد لاختبارات القدرات</span>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">نماذج امتحانات تجريبية</div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">مراجعات مكثفة قبل الاختبارات</div>
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">مراجعات مكثفة</span>
                     </div>
                 </div>
                 
-                <button class="subscribe-btn" onclick="selectPackage('المرحلة الثانوية')">اختر هذه الباقة</button>
+                <div class="mt-auto">
+                    <button class="btn subscribe-btn w-100 py-3 btn-responsive" onclick="selectPackage('المرحلة الثانوية')">اختر هذه الباقة</button>
+                </div>
             </div>
 
-            <!-- التأهيل للجامعة -->
-            <div class="pricing-card fade-in">
-                <div class="card-header">
-                    <h3 class="card-title">التأهيل للجامعة</h3>
-                    <p class="card-subtitle">قدرات عامة وتحصيلي</p>
+            <!-- University Support -->
+            <div class="pricing-card h-100 d-flex flex-column p-4 fade-in">
+                <div class="text-center border-bottom pb-3 mb-3">
+                    <h4 class="fw-bold text-primary">الدعم الجامعي</h4>
+                    <p class="text-muted small text-responsive">لطلاب الجامعات والكليات والماجستير</p>
                 </div>
                 
-                <div class="price-display">
-                    <span class="price-amount">500</span>
-                    <span class="price-currency">ريال</span>
-                    <span class="price-period">/ شهرياً</span>
+                <div class="text-center mb-4">
+                    <span class="price-amount university-price">400</span>
+                    <span class="fs-5 text-muted currency-symbol">ريال سعودي</span>
+                    <span class="d-block text-muted text-responsive">شهرياً</span>
                 </div>
                 
-                <div class="features-list">
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">تدريب على اختبار القدرات</div>
+                <div class="flex-grow-1 mb-4">
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">دورات متخصصة حسب التخصص</span>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">حل نماذج امتحانات حقيقية</div>
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">دعم أكاديمي متقدم</span>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">اختبارات تحصيلي تخصصية</div>
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">مساعدة في المشاريع والأبحاث</span>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">استراتيجيات حل الأسئلة</div>
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">إرشاد مهني وأكاديمي</span>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">جلسات مراجعة مكثفة</div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">محاكاة ظروف الاختبار الحقيقي</div>
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="feature-check mt-1"></div>
+                        <span class="text-responsive">تدريب على مهارات البحث</span>
                     </div>
                 </div>
                 
-                <button class="subscribe-btn" onclick="selectPackage('التأهيل للجامعة')">اختر هذه الباقة</button>
-            </div>
-
-            <!-- الدعم الجامعي -->
-            <div class="pricing-card fade-in">
-                <div class="card-header">
-                    <h3 class="card-title">الدعم الجامعي</h3>
-                    <p class="card-subtitle">لطلاب الجامعات والكليات</p>
-                </div>
-                
-                <div class="price-display">
-                    <span class="price-amount">550</span>
-                    <span class="price-currency">ريال</span>
-                    <span class="price-period">/ شهرياً</span>
-                </div>
-                
-                <div class="features-list">
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">دورات متخصصة حسب التخصص</div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">دعم أكاديمي متقدم</div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">مساعدة في المشاريع والأبحاث</div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">إرشاد مهني وأكاديمي</div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">حلقات نقاش أكاديمية</div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-check"></div>
-                        <div class="feature-text">تدريب على مهارات العرض والتقديم</div>
-                    </div>
-                </div>
-                
-                <button class="subscribe-btn" onclick="selectPackage('الدعم الجامعي')">اختر هذه الباقة</button>
-            </div>
-        </div>
-
-        <!-- قسم مقارنة مع التعليم التقليدي -->
-        <div class="comparison-section fade-in">
-            <div class="comparison-container">
-                <div class="comparison-header">
-                    <h2>لماذا التعليم الأونلاين أفضل من التعليم التقليدي؟</h2>
-                    <p>مقارنة شفافة تُظهر الفرق الحقيقي</p>
-                </div>
-                
-                <div class="comparison-table">
-                    <div class="comparison-row header-row">
-                        <div class="comparison-item feature-column">المميزة</div>
-                        <div class="comparison-item traditional-column">التعليم التقليدي</div>
-                        <div class="comparison-item online-column">أكاديمية النجاح أونلاين</div>
-                    </div>
-                    
-                    <div class="comparison-row">
-                        <div class="comparison-item feature-column">التكلفة الشهرية</div>
-                        <div class="comparison-item traditional-column">
-                            <span class="cost-amount">800-1200 ريال</span>
-                            <span class="cost-details">+ مواصلات + كتب</span>
-                        </div>
-                        <div class="comparison-item online-column winner">
-                            <span class="cost-amount">300-550 ريال</span>
-                            <span class="cost-details">اوفر وأسرع  </span>
-                        </div>
-                    </div>
-                    
-                    <div class="comparison-row">
-                        <div class="comparison-item feature-column">المرونة في الوقت</div>
-                        <div class="comparison-item traditional-column">
-                            <div class="feature-status negative">مواعيد ثابتة</div>
-                            <span class="feature-details">لا يمكن تغييرها</span>
-                        </div>
-                        <div class="comparison-item online-column winner">
-                            <div class="feature-status positive">مرونة كاملة</div>
-                            <span class="feature-details">اختر الوقت المناسب</span>
-                        </div>
-                    </div>
-                    
-                    <div class="comparison-row">
-                        <div class="comparison-item feature-column">نسبة الطلاب للمعلم</div>
-                        <div class="comparison-item traditional-column">
-                            <div class="feature-status negative">15-25 طالب</div>
-                            <span class="feature-details">اهتمام أقل لكل طالب</span>
-                        </div>
-                        <div class="comparison-item online-column winner">
-                            <div class="feature-status positive">1:1 أو مجموعات صغيرة</div>
-                            <span class="feature-details">اهتمام شخصي مركز</span>
-                        </div>
-                    </div>
-                    
-                    <div class="comparison-row">
-                        <div class="comparison-item feature-column">تسجيل الحصص</div>
-                        <div class="comparison-item traditional-column">
-                            <div class="feature-status negative">غير متوفر</div>
-                            <span class="feature-details">لا يمكن المراجعة</span>
-                        </div>
-                        <div class="comparison-item online-column winner">
-                            <div class="feature-status positive">تسجيل كامل</div>
-                            <span class="feature-details">مراجعة متى شئت</span>
-                        </div>
-                    </div>
-                    
-                    <div class="comparison-row">
-                        <div class="comparison-item feature-column">تقارير الأداء</div>
-                        <div class="comparison-item traditional-column">
-                            <div class="feature-status neutral">تقارير شهرية</div>
-                            <span class="feature-details">معلومات محدودة</span>
-                        </div>
-                        <div class="comparison-item online-column winner">
-                            <div class="feature-status positive">تقارير مفصلة</div>
-                            <span class="feature-details">متابعة يومية</span>
-                        </div>
-                    </div>
-                    
-                    <div class="comparison-row">
-                        <div class="comparison-item feature-column">الأمان والحماية</div>
-                        <div class="comparison-item traditional-column">
-                            <div class="feature-status neutral">بيئة خارجية</div>
-                            <span class="feature-details">خارج رقابة الأهل</span>
-                        </div>
-                        <div class="comparison-item online-column winner">
-                            <div class="feature-status positive">في المنزل</div>
-                            <span class="feature-details">تحت رقابة الأهل</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="comparison-summary">
-                    <h3>💰 احسب كم توفر شهرياً</h3>
-                    <div class="savings-calculation">
-                        <div class="calculation-item">
-                            <span class="calc-label">التعليم التقليدي (متوسط):</span>
-                            <span class="calc-amount traditional">1000 ريال</span>
-                        </div>
-                        <div class="calculation-item">
-                            <span class="calc-label">أكاديمية النجاح أونلاين:</span>
-                            <span class="calc-amount online">350 ريال</span>
-                        </div>
-                        <div class="calculation-result">
-                            <span class="calc-label">توفر شهرياً:</span>
-                            <span class="calc-savings">650 ريال</span>
-                        </div>
-                        <div class="yearly-savings">
-                            <strong>توفر سنوياً: 7,800 ريال!</strong>
-                        </div>
-                    </div>
+                <div class="mt-auto">
+                    <button class="btn subscribe-btn w-100 py-3 btn-responsive" onclick="selectPackage('الدعم الجامعي')">اختر هذه الباقة</button>
                 </div>
             </div>
         </div>
 
-        <!-- قسم جدولة تجربة مجانية -->
-        <div class="free-trial-section fade-in">
-            <div class="trial-container">
-                <div class="trial-header">
-                    <h2>جرب الآن - حصة مجانية تماماً</h2>
-                    <p>لا التزامات، لا رسوم خفية، فقط تجربة حقيقية لجودة تعليمنا</p>
-                </div>
-                
-                <div class="trial-features">
-                    <div class="trial-feature">
-                        <div class="trial-icon">🎯</div>
-                        <div class="trial-text">
-                            <h4>تقييم مستوى مجاني</h4>
-                            <p>تحديد نقاط القوة والضعف</p>
-                        </div>
-                    </div>
-                    <div class="trial-feature">
-                        <div class="trial-icon">📚</div>
-                        <div class="trial-text">
-                            <h4>حصة تعليمية كاملة</h4>
-                            <p>45 دقيقة تعليم تفاعلي</p>
-                        </div>
-                    </div>
-                    <div class="trial-feature">
-                        <div class="trial-icon">📋</div>
-                        <div class="trial-text">
-                            <h4>خطة دراسية مخصصة</h4>
-                            <p>برنامج مصمم خصيصاً لطفلك</p>
-                        </div>
-                    </div>
-                    <div class="trial-feature">
-                        <div class="trial-icon">👨‍🏫</div>
-                        <div class="trial-text">
-                            <h4>لقاء مع المعلم</h4>
-                            <p>تعرف على معلم طفلك شخصياً</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="trial-booking">
-                    <div class="booking-steps">
-                        <div class="booking-step">
-                            <div class="step-number">1</div>
-                            <div class="step-text">اختر الوقت المناسب</div>
-                        </div>
-                        <div class="booking-step">
-                            <div class="step-number">2</div>
-                            <div class="step-text">احجز عبر واتساب</div>
-                        </div>
-                        <div class="booking-step">
-                            <div class="step-number">3</div>
-                            <div class="step-text">استمتع بالحصة المجانية</div>
-                        </div>
-                    </div>
+        <!-- Comparison Section -->
+ <!-- Comparison Section -->
+<div class="bg-light rounded-4 p-4 p-md-5 mb-5 fade-in">
+    <div class="text-center mb-5">
+        <h2 class="section-title">لماذا التعليم الأونلاين أفضل من التعليم التقليدي؟</h2>
+        <p class="fs-5 text-muted text-responsive">مقارنة شفافة تُظهر الفرق الحقيقي</p>
+    </div>
+    
+    <div class="bg-white rounded-3 overflow-hidden shadow-sm mb-4">
+        <div class="table-responsive">
+            <table class="table table-borderless mb-0 comparison-table">
+                <!-- Header Row -->
+                <thead class="bg-primary text-white">
+                    <tr>
+                        <th class="p-3 text-center fw-bold">المميزة</th>
+                        <th class="p-3 text-center fw-bold border-start">التعليم التقليدي</th>
+                        <th class="p-3 text-center fw-bold border-start">أكاديمية النجاح</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Cost Row -->
+                    <tr class="border-bottom">
+                        <td class="p-3 bg-light text-center fw-semibold text-primary feature-title">التكلفة الشهرية</td>
+                        <td class="p-3 text-center border-start">
+                            <div class="fw-bold text-danger">800-1200 ريال</div>
+                            <small class="text-muted text-responsive">+ مواصلات + كتب</small>
+                        </td>
+                        <td class="p-3 text-center border-start bg-success bg-opacity-10">
+                            <div class="fw-bold text-success">200-400 ريال</div>
+                            <small class="text-success text-responsive">شامل كل شيء</small>
+                        </td>
+                    </tr>
                     
-                    <div class="time-slots">
-                        <h4>المواعيد المتاحة اليوم:</h4>
-                        <div class="slots-grid">
-                            <button class="time-slot" onclick="bookFreeSession('4:00 مساءً')">4:00 مساءً</button>
-                            <button class="time-slot" onclick="bookFreeSession('5:30 مساءً')">5:30 مساءً</button>
-                            <button class="time-slot" onclick="bookFreeSession('7:00 مساءً')">7:00 مساءً</button>
-                            <button class="time-slot" onclick="bookFreeSession('8:30 مساءً')">8:30 مساءً</button>
-                        </div>
-                        <p class="slots-note">💡 يمكنك اختيار مواعيد أخرى عبر التواصل المباشر</p>
-                    </div>
+                    <!-- Flexibility Row -->
+                    <tr class="border-bottom">
+                        <td class="p-3 bg-light text-center fw-semibold text-primary feature-title">المرونة في الوقت</td>
+                        <td class="p-3 text-center border-start">
+                            <span class="badge bg-danger mb-1">مواعيد ثابتة</span>
+                            <small class="d-block text-muted text-responsive">لا يمكن تغييرها</small>
+                        </td>
+                        <td class="p-3 text-center border-start bg-success bg-opacity-10">
+                            <span class="badge bg-success mb-1">مرونة كاملة</span>
+                            <small class="d-block text-success text-responsive">اختر الوقت المناسب</small>
+                        </td>
+                    </tr>
                     
-                    <div class="trial-guarantee">
-                        <h4>🛡️ ضمان التجربة المجانية</h4>
-                        <ul>
-                            <li>لا توجد أي التزامات مالية</li>
-                            <li>لن نطلب بيانات بطاقة ائتمان</li>
-                            <li>يمكنك إنهاء الجلسة في أي وقت</li>
-                            <li>لا يوجد ضغط للتسجيل</li>
-                        </ul>
-                    </div>
+                    <!-- Class Size Row -->
+                    <tr class="border-bottom">
+                        <td class="p-3 bg-light text-center fw-semibold text-primary feature-title">نسبة الطلاب للمعلم</td>
+                        <td class="p-3 text-center border-start">
+                            <span class="badge bg-warning mb-1">15-25 طالب</span>
+                            <small class="d-block text-muted text-responsive">اهتمام أقل</small>
+                        </td>
+                        <td class="p-3 text-center border-start bg-success bg-opacity-10">
+                            <span class="badge bg-success mb-1">1:1 أو مجموعات صغيرة</span>
+                            <small class="d-block text-success text-responsive">اهتمام شخصي مركز</small>
+                        </td>
+                    </tr>
                     
-                    <div class="trial-cta">
-                        <a href="https://wa.me/+201556762132?text=أريد حجز حصة مجانية لطفلي" class="trial-btn main-btn">
-                            احجز حصتك المجانية الآن
-                        </a>
-                        <a href="https://wa.me/+201556762132?text=أريد معرفة المزيد عن التجربة المجانية" class="trial-btn secondary-btn">
-                            اسأل عن تفاصيل أكثر
-                        </a>
-                    </div>
-                </div>
-            </div>
+                    <!-- Recording Row -->
+                    <tr class="border-bottom">
+                        <td class="p-3 bg-light text-center fw-semibold text-primary feature-title">تسجيل الحصص</td>
+                        <td class="p-3 text-center border-start">
+                            <span class="badge bg-danger mb-1">غير متوفر</span>
+                            <small class="d-block text-muted text-responsive">لا يمكن المراجعة</small>
+                        </td>
+                        <td class="p-3 text-center border-start bg-success bg-opacity-10">
+                            <span class="badge bg-success mb-1">تسجيل كامل</span>
+                            <small class="d-block text-success text-responsive">مراجعة متى شئت</small>
+                        </td>
+                    </tr>
+                    
+                    <!-- Safety Row -->
+                    <tr>
+                        <td class="p-3 bg-light text-center fw-semibold text-primary feature-title">الأمان والحماية</td>
+                        <td class="p-3 text-center border-start">
+                            <span class="badge bg-warning mb-1">بيئة خارجية</span>
+                            <small class="d-block text-muted text-responsive">خارج رقابة الأهل</small>
+                        </td>
+                        <td class="p-3 text-center border-start bg-success bg-opacity-10">
+                            <span class="badge bg-success mb-1">في المنزل</span>
+                            <small class="d-block text-success text-responsive">تحت رقابة الأهل</small>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-
-        <!-- قسم شهادات العملاء والنجاحات -->
-        <div class="testimonials-section fade-in">
-            <div class="testimonials-container">
-                <div class="testimonials-header">
-                    <h2>قصص نجاح حقيقية من أولياء الأمور</h2>
-                    <p>شاهد كيف غيّرت أكاديمية النجاح مستقبل أطفالهم</p>
-                </div>
-                
-                <div class="testimonials-grid">
-                    <div class="testimonial-card featured">
-                        <div class="testimonial-header">
-                            <div class="stars">⭐⭐⭐⭐⭐</div>
-                            <div class="improvement-badge">تحسن بنسبة 85%</div>
-                        </div>
-                        <div class="testimonial-content">
-                            <p>"ابنتي سارة كانت تعاني في الرياضيات، درجاتها كانت 45%. بعد 3 أشهر مع أكاديمية النجاح، حصلت على 92% في الاختبار النهائي! المعلمة صبورة ومتمكنة."</p>
-                            <div class="testimonial-author">
-                                <div class="author-info">
-                                    <div class="author-name">أم سارة - الرياض</div>
-                                    <div class="author-details">طالبة في الصف الثالث المتوسط</div>
-                                </div>
-                                <div class="grade-improvement">
-                                    <span class="before-grade">45%</span>
-                                    <span class="arrow">→</span>
-                                    <span class="after-grade">92%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="stars">⭐⭐⭐⭐⭐</div>
-                            <div class="improvement-badge">قبول جامعي</div>
-                        </div>
-                        <div class="testimonial-content">
-                            <p>"فيصل كان قلقاً من اختبار القدرات. الأكاديمية ساعدته يحصل على 85 في القدرات و 89 في التحصيلي. الآن مقبول في كلية الطب!"</p>
-                            <div class="testimonial-author">
-                                <div class="author-info">
-                                    <div class="author-name">أبو فيصل - جدة</div>
-                                    <div class="author-details">خريج ثانوية - مقبول طب</div>
-                                </div>
-                                <div class="test-scores">
-                                    <span class="score">قدرات: 85</span>
-                                    <span class="score">تحصيلي: 89</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="stars">⭐⭐⭐⭐⭐</div>
-                            <div class="improvement-badge">توفير 8000 ريال</div>
-                        </div>
-                        <div class="testimonial-content">
-                            <p>"عندي 3 أطفال، كنت أدفع 2400 ريال شهرياً في مراكز تعليمية. الآن أدفع 800 ريال فقط والنتائج أفضل بكثير!"</p>
-                            <div class="testimonial-author">
-                                <div class="author-info">
-                                    <div class="author-name">أم أحمد - الدمام</div>
-                                    <div class="author-details">3 أطفال - ابتدائي ومتوسط</div>
-                                </div>
-                                <div class="cost-saving">
-                                    <span class="old-cost">2400 ريال</span>
-                                    <span class="arrow">→</span>
-                                    <span class="new-cost">800 ريال</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="stars">⭐⭐⭐⭐⭐</div>
-                            <div class="improvement-badge">تفوق أكاديمي</div>
-                        </div>
-                        <div class="testimonial-content">
-                            <p>"نورا كانت خجولة ولا تشارك في الفصل. التعليم الفردي ساعدها تكتسب ثقة، والآن من المتفوقات في مدرستها."</p>
-                            <div class="testimonial-author">
-                                <div class="author-info">
-                                    <div class="author-name">أم نورا - مكة</div>
-                                    <div class="author-details">طالبة في الصف الخامس الابتدائي</div>
-                                </div>
-                                <div class="achievement">متفوقة في المدرسة</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="stars">⭐⭐⭐⭐⭐</div>
-                            <div class="improvement-badge">نجح في الجامعة</div>
-                        </div>
-                        <div class="testimonial-content">
-                            <p>"كنت أواجه صعوبة في مواد الهندسة بالجامعة. الدعم الجامعي من الأكاديمية ساعدني أتخرج بتقدير ممتاز."</p>
-                            <div class="testimonial-author">
-                                <div class="author-info">
-                                    <div class="author-name">خالد - طالب جامعي</div>
-                                    <div class="author-details">كلية الهندسة - جامعة الملك سعود</div>
-                                </div>
-                                <div class="gpa">معدل: 4.2/5.0</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="stars">⭐⭐⭐⭐⭐</div>
-                            <div class="improvement-badge">راحة نفسية</div>
-                        </div>
-                        <div class="testimonial-content">
-                            <p>"أكثر شي عجبني هو التقارير المفصلة والمتابعة المستمرة. أقدر أشوف تطور ولدي يومياً، وهذا يعطيني راحة بال."</p>
-                            <div class="testimonial-author">
-                                <div class="author-info">
-                                    <div class="author-name">أبو عبدالله - الطائف</div>
-                                    <div class="author-details">طالب في الصف الأول الثانوي</div>
-                                </div>
-                                <div class="satisfaction">راضي 100%</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="success-stats">
-                    <div class="stats-header">
-                        <h3>إحصائيات نجاحاتنا</h3>
-                    </div>
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <div class="stat-number">95%</div>
-                            <div class="stat-label">من طلابنا يحسنون درجاتهم</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">2,500+</div>
-                            <div class="stat-label">طالب نجح معنا</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">4.9/5</div>
-                            <div class="stat-label">تقييم الأهالي</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">90%</div>
-                            <div class="stat-label">يوصون بنا لأصدقائهم</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonials-cta">
-                    <h3>هل تريد أن يكون طفلك من قصص النجاح القادمة؟</h3>
-                    <a href="https://wa.me/+201556762132?text=قرأت قصص النجاح وأريد أن يكون طفلي منهم" class="success-btn">
-                        ابدأ قصة نجاح طفلك الآن
-                    </a>
-                </div>
+    </div>
+</div>
+        <!-- Savings Calculator -->
+        <div class="bg-warning bg-opacity-10 rounded-4 p-4 p-md-5 mb-5 fade-in">
+            <div class="text-center mb-4">
+                <h3 class="fw-bold text-warning-emphasis">احسب كم توفر شهرياً</h3>
             </div>
-        </div>
-
-        <!-- قسم الخصومات والعروض الخاصة -->
-        <div class="discount-section fade-in">
-            <div class="discount-container">
-                <div class="discount-header">
-                    <h2>🎉 عروض وخصومات خاصة</h2>
-                    <p>وفر أكثر مع عروضنا الحصرية للعائلات والطلاب المتميزين</p>
-                </div>
-                
-                <div class="discount-offers">
-                    <div class="discount-card siblings-discount">
-                        <div class="discount-icon">👨‍👩‍👧‍👦</div>
-                        <div class="discount-content">
-                            <h3>خصم الأخوة والأخوات</h3>
-                            <div class="discount-percentage">25%</div>
-                            <div class="discount-details">
-                                <p><strong>ابتداءً من الطالب الثاني:</strong></p>
-                                <ul>
-                                    <li>خصم 15% للطالب الثاني</li>
-                                    <li>خصم 20% للطالب الثالث</li>
-                                    <li>خصم 25% للطالب الرابع فما فوق</li>
-                                </ul>
-                                <div class="discount-note">
-                                    💡 <strong>مثال:</strong> عائلة من 3 طلاب (متوسط) توفر 367.5 ريال شهرياً!
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="discount-card multi-subject">
-                        <div class="discount-icon">📚</div>
-                        <div class="discount-content">
-                            <h3>خصم المواد المتعددة</h3>
-                            <div class="discount-percentage">30%</div>
-                            <div class="discount-details">
-                                <p><strong>للطالب الواحد المسجل بأكثر من مادة:</strong></p>
-                                <ul>
-                                    <li>مادتان: خصم 10%</li>
-                                    <li>3 مواد: خصم 15%</li>
-                                    <li>4 مواد: خصم 20%</li>
-                                    <li>5 مواد أو أكثر: خصم 30%</li>
-                                </ul>
-                                <div class="discount-note">
-                                    💡 <strong>مثال:</strong> طالب ثانوي بـ 5 مواد يدفع 315 ريال بدلاً من 450!
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="discount-card early-bird">
-                        <div class="discount-icon">⏰</div>
-                        <div class="discount-content">
-                            <h3>خصم التسجيل المبكر</h3>
-                            <div class="discount-percentage">15%</div>
-                            <div class="discount-details">
-                                <p><strong>سجل قبل بداية الفصل الدراسي بشهر واحصل على:</strong></p>
-                                <ul>
-                                    <li>خصم 15% على الشهر الأول</li>
-                                    <li>جلسة تقييم مجانية</li>
-                                    <li>خطة دراسية مخصصة</li>
-                                    <li>أولوية اختيار المواعيد</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="discount-card annual-plan">
-                        <div class="discount-icon">📅</div>
-                        <div class="discount-content">
-                            <h3>باقة سنوية - توفير أكبر</h3>
-                            <div class="discount-percentage">20%</div>
-                            <div class="discount-details">
-                                <p><strong>ادفع سنوياً ووفر شهرين مجاناً:</strong></p>
-                                <ul>
-                                    <li>المرحلة الابتدائية: 2,880 ريال بدلاً من 3,600</li>
-                                    <li>المرحلة المتوسطة: 3,360 ريال بدلاً من 4,200</li>
-                                    <li>المرحلة الثانوية: 4,320 ريال بدلاً من 5,400</li>
-                                    <li>التأهيل للجامعة: 4,800 ريال بدلاً من 6,000</li>
-                                    <li>الدعم الجامعي: 5,280 ريال بدلاً من 6,600</li>
-                                </ul>
-                                <div class="discount-note">
-                                    💰 <strong>إمكانية التقسيط على 4 دفعات بدون فوائد</strong>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="combo-discount">
-                    <div class="combo-header">
-                        <h3>🔥 عرض الكومبو الذهبي</h3>
-                        <p>اجمع بين أكثر من عرض واحد واحصل على خصم إضافي!</p>
-                    </div>
-                    <div class="combo-examples">
-                        <div class="combo-example">
-                            <div class="combo-icon">💎</div>
-                            <div class="combo-text">
-                                <h4>عائلة من طالبين + مواد متعددة</h4>
-                                <p>خصم الأخوة + خصم المواد المتعددة = <strong>توفير يصل إلى 40%</strong></p>
-                            </div>
-                        </div>
-                        <div class="combo-example">
-                            <div class="combo-icon">🌟</div>
-                            <div class="combo-text">
-                                <h4>باقة سنوية + خصم الأخوة</h4>
-                                <p>الباقة السنوية + خصم الأخوة = <strong>توفير يصل إلى 45%</strong></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="discount-cta">
-                    <h3>🎯 احسب خصمك الشخصي</h3>
-                    <p>تواصل معنا لحساب الخصم المناسب لحالتك</p>
-                    <a href="https://wa.me/+201556762132?text=أريد حساب الخصم المناسب لعائلتي" class="discount-btn">احسب خصمك الآن</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- قسم طمأنة الأهالي -->
-        <div class="parents-section fade-in">
-            <div class="parents-content">
-                <div class="parents-text">
-                    <h2>راحة البال للأهالي</h2>
-                    <h3>نحن نفهم قلقكم على مستقبل أبنائكم</h3>
-                    
-                    <div class="assurance-points">
-                        <div class="assurance-point">
-                            <div class="assurance-icon">👨‍🏫</div>
-                            <div class="assurance-content">
-                                <h4>معلمين مؤهلين ومعتمدين</h4>
-                                <p>جميع معلمينا حاصلون على شهادات جامعية في تخصصاتهم ولديهم خبرة لا تقل عن 3 سنوات في التدريس</p>
-                            </div>
-                        </div>
-                        
-                        <div class="assurance-point">
-                            <div class="assurance-icon">📊</div>
-                            <div class="assurance-content">
-                                <h4>متابعة مستمرة وتقارير شفافة</h4>
-                                <p>تقارير أسبوعية مفصلة عن تطور ابنكم، مع إمكانية التواصل المباشر مع المعلم في أي وقت</p>
-                            </div>
-                        </div>
-                        
-                        <div class="assurance-point">
-                            <div class="assurance-icon">🛡️</div>
-                            <div class="assurance-content">
-                                <h4>بيئة تعليمية آمنة ومراقبة</h4>
-                                <p>جميع الحصص مسجلة ويمكن مراجعتها، مع التزام صارم بالمعايير التعليمية والأخلاقية</p>
-                            </div>
-                        </div>
-                        
-                        <div class="assurance-point">
-                            <div class="assurance-icon">💰</div>
-                            <div class="assurance-content">
-                                <h4>شفافية كاملة في التكاليف</h4>
-                                <p>لا توجد رسوم خفية - السعر الظاهر هو السعر النهائي، مع إمكانية إيقاف الاشتراك في أي وقت</p>
-                            </div>
-                        </div>
-                        
-              
-                                    <div class="assurance-point">
-                            <div class="assurance-icon">🎯</div>
-                            <div class="assurance-content">
-                                <h4>نتائج ملموسة وقابلة للقياس</h4>
-                                <p>نضمن تحسن الدرجات خلال 60 يوماً، أو نعيد لكم المبلغ كاملاً بدون أسئلة</p>
-                            </div>
-                        </div>
-                        
-                        <div class="assurance-point">
-                            <div class="assurance-icon">⏰</div>
-                            <div class="assurance-content">
-                                <h4>مرونة في المواعيد والإلغاء</h4>
-                                <p>يمكن تعديل المواعيد حتى ساعة قبل الحصة، وإيقاف الاشتراك بإشعار أسبوع واحد فقط</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="guarantee-box">
-                        <h4>🔒 ضمان رضاكم الكامل</h4>
-                        <p>إذا لم تلاحظوا تحسناً في درجات ابنكم خلال الشهرين الأولين، سنعيد لكم المبلغ كاملاً. نحن واثقون من جودة تعليمنا لدرجة أننا نتحمل المخاطرة بدلاً منكم.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="contact-section fade-in">
-            <h2>ابدأ رحلة النجاح اليوم</h2>
-            <p>فريقنا جاهز للإجابة على جميع استفساراتكم ومساعدتكم في اختيار الباقة المناسبة لطفلكم</p>
             
-            <div class="contact-methods">
-                <a href="https://wa.me/+201556762132?text=مرحبًا، أريد الاستفسار عن خدمات أكاديمية النجاح أونلاين" class="contact-method">
-                    💬 واتساب
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="bg-white rounded-3 p-4 shadow-sm">
+                        <div class="d-flex justify-content-between align-items-center py-3 border-bottom">
+                            <span class="fw-semibold text-responsive">التعليم التقليدي (متوسط):</span>
+                            <span class="fw-bold text-danger fs-5">1000 ريال</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-3 border-bottom">
+                            <span class="fw-semibold text-responsive">أكاديمية النجاح أونلاين:</span>
+                            <span class="fw-bold text-success fs-5">250 ريال</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-3 bg-primary bg-opacity-10 rounded-3 px-3">
+                            <span class="fw-bold fs-5 text-responsive">توفر شهرياً:</span>
+                            <span class="fw-bold text-primary fs-3">750 ريال</span>
+                        </div>
+                        <div class="text-center mt-3 p-3 bg-warning bg-opacity-20 rounded-3">
+                            <strong class="fs-4 text-warning-emphasis text-responsive">توفر سنوياً: 9,000 ريال!</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Success Stats -->
+        <div class="bg-primary text-white rounded-4 p-4 p-md-5 mb-5 fade-in">
+            <div class="text-center mb-4">
+                <h3 class="fw-bold">إحصائيات نجاحاتنا</h3>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-md-3 col-6">
+                    <div class="fs-1 fw-black" style="color: var(--warning-color);">95%</div>
+                    <div class="text-responsive">من طلابنا يحسنون درجاتهم</div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="fs-1 fw-black" style="color: var(--warning-color);">2,500+</div>
+                    <div class="text-responsive">طالب نجح معنا</div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="fs-1 fw-black" style="color: var(--warning-color);">4.9/5</div>
+                    <div class="text-responsive">تقييم الأهالي</div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="fs-1 fw-black" style="color: var(--warning-color);">90%</div>
+                    <div class="text-responsive">يوصون بنا لأصدقائهم</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Free Trial Section -->
+        <div class="bg-success text-white rounded-4 p-4 p-md-5 mb-5 fade-in">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold">جرب الآن - حصة مجانية تماماً</h2>
+                <p class="fs-5 text-responsive">لا التزامات، لا رسوم خفية، فقط تجربة حقيقية لجودة تعليمنا</p>
+            </div>
+            
+            <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center gap-3 bg-light bg-opacity-10 p-3 rounded-3">
+                        <div class="fs-1">🎯</div>
+                        <div>
+                            <h5 class="fw-semibold mb-1">تقييم مستوى مجاني</h5>
+                            <p class="mb-0 small text-responsive">تحديد نقاط القوة والضعف</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center gap-3 bg-light bg-opacity-10 p-3 rounded-3">
+                        <div class="fs-1">📚</div>
+                        <div>
+                            <h5 class="fw-semibold mb-1">حصة تعليمية كاملة</h5>
+                            <p class="mb-0 small text-responsive">45 دقيقة تعليم تفاعلي</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="https://wa.me/+201556762132?text=أريد حجز حصة مجانية لطفلي" class="btn btn-light btn-lg rounded-pill px-4 px-md-5 py-3 fw-bold text-success me-0 me-md-3 mb-3 mb-md-0 d-block d-md-inline-block btn-responsive">
+                    احجز حصتك المجانية الآن
                 </a>
-                <a href="tel:+201556762132" class="contact-method">
-                    📞 اتصال مباشر
+                <a href="https://wa.me/+201556762132?text=أريد معرفة المزيد عن التجربة المجانية" class="btn btn-outline-light btn-lg rounded-pill px-4 px-md-5 py-3 fw-bold d-block d-md-inline-block btn-responsive">
+                    اسأل عن تفاصيل أكثر
+                </a>
+            </div>
+        </div>
+
+        <!-- Parent Assurance -->
+        <div class="bg-light rounded-4 p-4 p-md-5 mb-5 fade-in">
+            <div class="text-center mb-5">
+                <h2 class="section-title">راحة البال للأهالي</h2>
+                <h4 class="text-muted fw-normal text-responsive">نحن نفهم قلقكم على مستقبل أبنائكم</h4>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="d-flex gap-3 bg-white p-4 rounded-3 h-100">
+                        <div class="fs-1">👨‍🏫</div>
+                        <div>
+                            <h5 class="text-primary fw-semibold">معلمين مؤهلين ومعتمدين</h5>
+                            <p class="text-muted mb-0 text-responsive">جميع معلمينا حاصلون على شهادات جامعية في تخصصاتهم ولديهم خبرة لا تقل عن 3 سنوات</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex gap-3 bg-white p-4 rounded-3 h-100">
+                        <div class="fs-1">📊</div>
+                        <div>
+                            <h5 class="text-primary fw-semibold">متابعة مستمرة وتقارير شفافة</h5>
+                            <p class="text-muted mb-0 text-responsive">تقارير أسبوعية مفصلة عن تطور ابنكم، مع إمكانية التواصل المباشر مع المعلم</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex gap-3 bg-white p-4 rounded-3 h-100">
+                        <div class="fs-1">🛡️</div>
+                        <div>
+                            <h5 class="text-primary fw-semibold">بيئة تعليمية آمنة ومراقبة</h5>
+                            <p class="text-muted mb-0 text-responsive">جميع الحصص مسجلة ويمكن مراجعتها، مع التزام صارم بالمعايير التعليمية والأخلاقية</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex gap-3 bg-white p-4 rounded-3 h-100">
+                        <div class="fs-1">🎯</div>
+                        <div>
+                            <h5 class="text-primary fw-semibold">نتائج ملموسة وقابلة للقياس</h5>
+                            <p class="text-muted mb-0 text-responsive">نضمن تحسن الدرجات خلال 60 يوماً، أو نعيد لكم المبلغ كاملاً بدون أسئلة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+ 
+        <!-- Contact Section -->
+        <div class="bg-white rounded-4 p-4 p-md-5 text-center shadow-sm fade-in mt-3">
+            <h2 class="section-title mb-3">ابدأ رحلة النجاح اليوم</h2>
+            <p class="fs-5 text-muted mb-4 text-responsive">فريقنا جاهز للإجابة على جميع استفساراتكم ومساعدتكم في اختيار الباقة المناسبة لطفلكم</p>
+            
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="https://wa.me/+201556762132?text=مرحبًا، أريد الاستفسار عن خدمات أكاديمية النجاح أونلاين" class="btn btn-outline-primary btn-lg rounded-pill px-4 py-3 fw-semibold btn-responsive">
+                    واتساب
+                </a>
+                <a href="tel:+201556762132" class="btn btn-outline-primary btn-lg rounded-pill px-4 py-3 fw-semibold btn-responsive">
+                    اتصال مباشر
                 </a>
             </div>
         </div>
     </div>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
     <script>
-        // عد تنازلي للعرض المحدود
+        // Currency conversion rates and data
+        const currencyData = {
+            'SAR': { rate: 1, symbol: 'ريال سعودي' },
+            'AED': { rate: 1, symbol: 'درهم إماراتي' },
+            'KWD': { rate: 0.12, symbol: 'دينار كويتي' },
+            'QAR': { rate: 1.45, symbol: 'ريال قطري' }
+        };
+
+        const basePrices = {
+            foundation: 150,
+            elementary: 200,
+            middle: 250,
+            high: 350,
+            university: 400,
+            // Two subjects packages (25% discount)
+            foundationTwo: 250,        // Updated price
+            elementaryTwo: 350,        // Updated price  
+            middleTwo: 450,            // Updated price
+            highTwo: 600,              // Updated price
+            // Original prices for two subjects (calculated from new single prices)
+            foundationTwoOriginal: 300,    // 150 * 2
+            elementaryTwoOriginal: 400,    // 200 * 2
+            middleTwoOriginal: 500,        // 250 * 2
+            highTwoOriginal: 700,          // 350 * 2
+            // All subjects packages
+            foundationAll: 450,
+            elementaryAll: 650,
+            middleAll: 700,
+            highAll: 900
+        };
+
+        let currentCurrency = 'SAR';
+
+        // Currency change function
+        function changeCurrency(currency, rate, symbol) {
+            currentCurrency = currency;
+            
+            // Update active button
+            document.querySelectorAll('.currency-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Update regular prices
+            const foundationPrice = Math.round(basePrices.foundation * rate);
+            const elementaryPrice = Math.round(basePrices.elementary * rate);
+            const middlePrice = Math.round(basePrices.middle * rate);
+            const highPrice = Math.round(basePrices.high * rate);
+            const universityPrice = Math.round(basePrices.university * rate);
+            
+            // Update two subjects package prices
+            const foundationTwoPrice = Math.round(basePrices.foundationTwo * rate);
+            const elementaryTwoPrice = Math.round(basePrices.elementaryTwo * rate);
+            const middleTwoPrice = Math.round(basePrices.middleTwo * rate);
+            const highTwoPrice = Math.round(basePrices.highTwo * rate);
+            
+            const foundationTwoOriginalPrice = Math.round(basePrices.foundationTwoOriginal * rate);
+            const elementaryTwoOriginalPrice = Math.round(basePrices.elementaryTwoOriginal * rate);
+            const middleTwoOriginalPrice = Math.round(basePrices.middleTwoOriginal * rate);
+            const highTwoOriginalPrice = Math.round(basePrices.highTwoOriginal * rate);
+            
+            // Update all subjects package prices
+            const foundationAllPrice = Math.round(basePrices.foundationAll * rate);
+            const elementaryAllPrice = Math.round(basePrices.elementaryAll * rate);
+            const middleAllPrice = Math.round(basePrices.middleAll * rate);
+            const highAllPrice = Math.round(basePrices.highAll * rate);
+            
+            // Update DOM elements - Regular prices
+            document.querySelector('.foundation-price').textContent = foundationPrice;
+            document.querySelector('.elementary-price').textContent = elementaryPrice;
+            document.querySelector('.middle-price').textContent = middlePrice;
+            document.querySelector('.high-price').textContent = highPrice;
+            document.querySelector('.university-price').textContent = universityPrice;
+            
+            // Update DOM elements - Two subjects packages
+            document.querySelector('.foundation-two-price').textContent = foundationTwoPrice;
+            document.querySelector('.elementary-two-price').textContent = elementaryTwoPrice;
+            document.querySelector('.middle-two-price').textContent = middleTwoPrice;
+            document.querySelector('.high-two-price').textContent = highTwoPrice;
+            
+            document.querySelector('.foundation-two-original').textContent = foundationTwoOriginalPrice;
+            document.querySelector('.elementary-two-original').textContent = elementaryTwoOriginalPrice;
+            document.querySelector('.middle-two-original').textContent = middleTwoOriginalPrice;
+            document.querySelector('.high-two-original').textContent = highTwoOriginalPrice;
+            
+            // Update DOM elements - All subjects packages
+            document.querySelector('.foundation-all-price').textContent = foundationAllPrice;
+            document.querySelector('.elementary-all-price').textContent = elementaryAllPrice;
+            document.querySelector('.middle-all-price').textContent = middleAllPrice;
+            document.querySelector('.high-all-price').textContent = highAllPrice;
+            
+            // Update currency symbols
+            document.querySelectorAll('.currency-symbol').forEach(el => el.textContent = symbol);
+        }
+
+        // Countdown timer
         function startCountdown() {
             const countdownElement = document.getElementById('countdown');
             let hours = 72;
@@ -3712,21 +1557,23 @@
             }, 1000);
         }
 
-        // اختيار الباقة
+        // Package selection
         function selectPackage(packageName) {
-            const message = `مرحبًا، أريد الاشتراك في باقة ${packageName}. يرجى إرسال التفاصيل والأسعار.`;
+            const currencySymbol = currencyData[currentCurrency].symbol;
+            const message = `مرحبًا، أريد الاشتراك في ${packageName}. العملة المفضلة: ${currencySymbol}. يرجى إرسال التفاصيل والأسعار.`;
             const whatsappUrl = `https://wa.me/+201556762132?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank');
         }
 
-        // حجز جلسة مجانية
-        function bookFreeSession(time) {
-            const message = `مرحبًا، أريد حجز الجلسة المجانية في الساعة ${time}. يرجى تأكيد الموعد.`;
+        // Special offer selection
+        function selectOffer(offerName) {
+            const currencySymbol = currencyData[currentCurrency].symbol;
+            const message = `مرحبًا، أريد الاستفادة من ${offerName}. العملة المفضلة: ${currencySymbol}. يرجى إرسال التفاصيل والشروط.`;
             const whatsappUrl = `https://wa.me/+201556762132?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank');
         }
 
-        // تأثير الظهور التدريجي
+        // Fade in animation
         function observeElements() {
             const fadeElements = document.querySelectorAll('.fade-in');
             
@@ -3743,7 +1590,7 @@
             });
         }
 
-        // تشغيل السكريبت عند تحميل الصفحة
+        // Initialize on page load
         document.addEventListener('DOMContentLoaded', function() {
             startCountdown();
             observeElements();
